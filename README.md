@@ -1,12 +1,13 @@
-## Launch an XRd topology on an AWS instance
+## Launch an XRd topology on a VM or AWS instance (Ubuntu 20.04 in both cases)
 
-Recommended EC2 instance: t3a.xlarge
+If using AWS I recommend EC2 instance t3a.xlarge or larger for a 6 node topology
 
 1. Copy files from this repo to your AWS VM
-2. Upload an XRd image to your VM (CCO download site: https://software.cisco.com/download/home/286331236/type/280805694/release/7.7.1)
-3. Install docker https://docs.docker.com/engine/install/ubuntu/
-4. Install docker-compose: sudo apt install docker-compose
-5. docker without sudo:  sudo usermod -aG docker $USER
+2. Upload an XRd image to your VM
+      CCO download site: https://software.cisco.com/download/home/286331236/type/280805694/release/7.7.1
+5. Install docker https://docs.docker.com/engine/install/ubuntu/
+6. Install docker-compose: sudo apt install docker-compose
+7. docker without sudo:  sudo usermod -aG docker $USER
       
       Then logout/login
 7. Load your image:

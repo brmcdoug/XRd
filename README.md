@@ -31,7 +31,11 @@ fs.inotify.max_user_instances=65536
 ```
 ./launch-xrd --dry-run localhost/ios-xr:7.7.1
   
-./xr-compose -f docker-compose-5-node.yml -i localhost/ios-xr:7.7.1 -l
+./xr-compose -f docker-compose-6-node.yml -i localhost/ios-xr:7.7.1 -l
+
+or
+
+./xr-compose -f docker-compose-4-node.yml -i localhost/ios-xr:7.7.1 -l
   
 ```
 12. check containers: docker ps
@@ -46,6 +50,17 @@ docker-compose down
 docker volume rm xrd-25
 docker volume rm xrd-26
 docker volume rm xrd-27
+docker volume rm xrd-28
 docker volume rm xrd-29
 docker volume rm xrd-30
+```
+
+14. Cleanup if running 4-node topology:
+```
+docker-compose down
+docker volume rm xrd-31
+docker volume rm xrd-32
+docker volume rm xrd-33
+docker volume rm xrd-34
+
 ```

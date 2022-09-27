@@ -39,7 +39,7 @@ or
   
 ```
 12. check containers: docker ps
-13. access XR cli:
+13. access XR cli (note, it will take a couple minutes for the containers to build, so cli won't be immediately available):
 ```
 docker exec -it xrd-27 /pkg/bin/xr_cli.sh
 ```

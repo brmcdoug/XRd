@@ -1,4 +1,5 @@
-## Launch an XRd topology on a VM or AWS instance (Ubuntu 20.04 in both cases)
+## Launch an XRd topology on a VM or AWS instance 
+### Ubuntu 20.04 in both cases
 
 If using AWS I recommend EC2 instance t3a.xlarge or larger for a 6 node topology
 

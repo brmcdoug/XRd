@@ -11,9 +11,11 @@ If using AWS I recommend EC2 instance t3a.xlarge or larger for a 6 node topology
 7. docker without sudo:  sudo usermod -aG docker $USER
       
       Then logout/login
-7. Load your image:
+7. Untar and load your image:
 ```
-docker load -i xrd-control-plane-container-x64.7.7.1.tgz
+tar -xvf xrd-control-plane-container-x64.7.7.1.tgz 
+docker load -i xrd-control-plane-container-x64.dockerv1.tgz
+
 ```
 7. check image status: docker images
 8. add these lines to the end of /etc/sysctl.conf 
@@ -29,7 +31,7 @@ fs.inotify.max_user_instances=65536
   
 11. Dry run then launch topology
 ```
-./launch-xrd --dry-run localhost/ios-xr:7.7.1
+./launch-xrd --dry-run localhost/ios-xr:7.7.1 --platform xrd
   
 ./xr-compose -f docker-compose-6-node.yml -i localhost/ios-xr:7.7.1 -l
 

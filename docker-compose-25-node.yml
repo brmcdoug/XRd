@@ -75,7 +75,6 @@ services:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
-      - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
 
   xrd07:
@@ -86,8 +85,6 @@ services:
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Gi0/0/0/4
-      - Gi0/0/0/5
-      - Gi0/0/0/6
       - Mg0/RP0/CPU0/0
   xrd08:
     xr_startup_cfg: config/xrd08.cfg
@@ -97,8 +94,6 @@ services:
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Gi0/0/0/4
-      - Gi0/0/0/5
-      - Gi0/0/0/6
       - Mg0/RP0/CPU0/0
 
   xrd09:
@@ -180,7 +175,6 @@ services:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
-      - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
 
   xrd18:
@@ -245,7 +239,6 @@ services:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
-      - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
 
 xr_l2networks:

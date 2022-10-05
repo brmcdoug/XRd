@@ -355,14 +355,14 @@ networks:
   xrd00-host2:
     ipam:
       config:
-        - subnet: 10.1.40.8/29
+        - subnet: 10.1.40.0/29
     xr_interfaces:
       - xrd00:Gi0/0/0/3
 
   xrd01-host1:
     ipam:
       config:
-        - subnet: 10.1.41.0/29
+        - subnet: 10.1.41.8/29
     xr_interfaces:
       - xrd01:Gi0/0/0/2
   xrd01-host2:
@@ -414,7 +414,7 @@ networks:
   xrd13-host2:
     ipam:
       config:
-        - subnet: 10.1.60.8/29
+        - subnet: 10.1.60.0/29
     xr_interfaces:
       - xrd13:Gi0/0/0/3
 

@@ -427,7 +427,7 @@ networks:
   xrd14-host2:
     ipam:
       config:
-        - subnet: 10.1.61.8/29
+        - subnet: 10.1.60.8/29
     xr_interfaces:
       - xrd14:Gi0/0/0/3
 

@@ -1,6 +1,6 @@
 #/bin/sh
 
-docker compose down
+docker-compose down
 docker volume rm xrd-25
 docker volume rm xrd-26
 docker volume rm xrd-27

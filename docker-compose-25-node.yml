@@ -297,7 +297,6 @@ xr_l2networks:
   - ["xrd15:Gi0/0/0/1", "xrd18:Gi0/0/0/4"]
   - ["xrd15:Gi0/0/0/3", "xrd17:Gi0/0/0/0"]
 
-  - ["xrd16:Gi0/0/0/1", "xrd18:Gi0/0/0/4"]
   - ["xrd16:Gi0/0/0/2", "xrd19:Gi0/0/0/6"]
   - ["xrd16:Gi0/0/0/3", "xrd17:Gi0/0/0/1"]
 
@@ -306,7 +305,6 @@ xr_l2networks:
   - ["xrd18:Gi0/0/0/5", "xrd21:Gi0/0/0/0"]
   - ["xrd18:Gi0/0/0/6", "xrd20:Gi0/0/0/0"]
 
-  - ["xrd19:Gi0/0/0/1", "xrd22:Gi0/0/0/2"]
   - ["xrd19:Gi0/0/0/3", "xrd23:Gi0/0/0/3"]
   - ["xrd19:Gi0/0/0/4", "xrd21:Gi0/0/0/1"]
   - ["xrd19:Gi0/0/0/5", "xrd20:Gi0/0/0/1"]
@@ -366,13 +364,13 @@ networks:
       config:
         - subnet: 10.1.41.0/29
     xr_interfaces:
-      - xrd00:Gi0/0/0/2
+      - xrd01:Gi0/0/0/2
   xrd01-host2:
     ipam:
       config:
         - subnet: 10.1.40.8/29
     xr_interfaces:
-      - xrd00:Gi0/0/0/3
+      - xrd01:Gi0/0/0/3
 
   xrd06-host:
     ipam:

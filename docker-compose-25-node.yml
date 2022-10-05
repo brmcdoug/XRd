@@ -351,13 +351,26 @@ networks:
   xrd00-host1:
     ipam:
       config:
-        - subnet: 10.10.0.0/29
+        - subnet: 10.1.41.0/29
     xr_interfaces:
       - xrd00:Gi0/0/0/2
   xrd00-host2:
     ipam:
       config:
-        - subnet: 10.10.0.8/29
+        - subnet: 10.1.40.8/29
+    xr_interfaces:
+      - xrd00:Gi0/0/0/3
+
+  xrd01-host1:
+    ipam:
+      config:
+        - subnet: 10.1.41.0/29
+    xr_interfaces:
+      - xrd00:Gi0/0/0/2
+  xrd01-host2:
+    ipam:
+      config:
+        - subnet: 10.1.40.8/29
     xr_interfaces:
       - xrd00:Gi0/0/0/3
 
@@ -371,52 +384,52 @@ networks:
   xrd09-host1:
     ipam:
       config:
-        - subnet: 10.10.9.0/29
+        - subnet: 10.10.51.0/29
     xr_interfaces:
       - xrd09:Gi0/0/0/2
   xrd09-host2:
     ipam:
       config:
-        - subnet: 10.10.9.8/29
+        - subnet: 10.10.50.0/29
     xr_interfaces:
       - xrd09:Gi0/0/0/3
 
   xrd10-host1:
     ipam:
       config:
-        - subnet: 10.10.10.0/29
+        - subnet: 10.10.51.8/29
     xr_interfaces:
       - xrd10:Gi0/0/0/2
   xrd10-host2:
     ipam:
       config:
-        - subnet: 10.10.10.8/29
+        - subnet: 10.10.50.8/29
     xr_interfaces:
       - xrd10:Gi0/0/0/3
 
   xrd13-host1:
     ipam:
       config:
-        - subnet: 10.10.13.0/29
+        - subnet: 10.1.61.0/29
     xr_interfaces:
       - xrd13:Gi0/0/0/2
   xrd13-host2:
     ipam:
       config:
-        - subnet: 10.10.13.8/29
+        - subnet: 10.1.60.8/29
     xr_interfaces:
       - xrd13:Gi0/0/0/3
 
   xrd14-host1:
     ipam:
       config:
-        - subnet: 10.10.14.0/29
+        - subnet: 10.1.61.8/29
     xr_interfaces:
       - xrd14:Gi0/0/0/2
   xrd14-host2:
     ipam:
       config:
-        - subnet: 10.10.14.8/29
+        - subnet: 10.1.61.8/29
     xr_interfaces:
       - xrd14:Gi0/0/0/3
 
@@ -430,26 +443,26 @@ networks:
   xrd20-host1:
     ipam:
       config:
-        - subnet: 10.10.20.0/29
+        - subnet: 10.10.53.8/29
     xr_interfaces:
       - xrd20:Gi0/0/0/2
   xrd20-host2:
     ipam:
       config:
-        - subnet: 10.10.20.8/29
+        - subnet: 10.10.52.8/29
     xr_interfaces:
       - xrd20:Gi0/0/0/3
 
   xrd21-host1:
     ipam:
       config:
-        - subnet: 10.10.21.0/29
+        - subnet: 10.10.53.0/29
     xr_interfaces:
       - xrd21:Gi0/0/0/2
   xrd21-host2:
     ipam:
       config:
-        - subnet: 10.10.21.8/29
+        - subnet: 10.10.52.0/29
     xr_interfaces:
       - xrd21:Gi0/0/0/3
 

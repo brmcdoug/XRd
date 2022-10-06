@@ -3,7 +3,7 @@
 
 If using AWS I recommend EC2 instance t3a.xlarge or larger for a 6 node topology
 
-1. Copy files from this repo to your AWS VM
+1. Copy files from this repo to your VM
 2. Upload an XRd image to your VM
       CCO download site: https://software.cisco.com/download/home/286331236/type/280805694/release/7.7.1
 5. Install docker https://docs.docker.com/engine/install/ubuntu/

@@ -4,19 +4,21 @@
 If using AWS I recommend EC2 instance t3a.xlarge or larger for a 6 node topology
 
 1. Copy files from this repo to your host or VM
-2. Upload an XRd image:
-      CCO download site: https://software.cisco.com/download/home/286331236/type/280805694/release/7.7.1
+2. Acquire and upload an XRd image:
+
+      XRd's CCO download site: https://software.cisco.com/download/home/286331236/type/280805694/release/7.7.1
+
 3. Install docker https://docs.docker.com/engine/install/ubuntu/
 4. Install docker-compose: 
 ```
 sudo apt install docker-compose
 ```
-5. Optional: to run docker commands without sudo:  
+5. Optional - to run docker commands without sudo:  
 ```
 sudo usermod -aG docker $USER
+
+// Then logout and log back in
 ```
-      
-      Then logout and log back in
 
 6. Untar and load your image:
 ```
@@ -40,14 +42,17 @@ net.bridge.bridge-nf-call-iptables=0
 net.bridge.bridge-nf-call-ip6tables=0
 fs.inotify.max_user_instances=65536
 ```
-9. Reload sysctl:  sudo sysctl -p
+9. Reload sysctl:  
+```
+sudo sysctl -p
+```
 10. Run host check script to validate we have sufficient server/VM resources:  
 ```
-sudo ./host-check 
+./host-check 
 ```   
    You may see hugepages and IOMMU errors/warnings. I proceeded without addressing these.
   
-11. Option: dry run script 
+11. Optional: dry run script 
 ```
 ./launch-xrd --dry-run localhost/ios-xr:7.7.1 --platform xrd
 ```

@@ -1,6 +1,7 @@
 #/bin/sh
 
 docker-compose down
+
 docker volume rm xrd00
 docker volume rm xrd01
 docker volume rm xrd02

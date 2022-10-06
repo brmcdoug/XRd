@@ -94,3 +94,36 @@ docker volume rm xrd-33
 docker volume rm xrd-34
 
 ```
+
+
+### 25 node topology
+Tested on bare metal with 32 vCPU and 96G of memory.
+It does require some additional tuning:
+
+1. Increase Docker default-address-pools by adding something like following to /etc/docker/daemon.json
+
+```
+{
+  "default-address-pools" : [
+    {
+      "base" : "172.17.0.0/12",
+      "size" : 20
+    },
+    {
+      "base" : "192.168.0.0/16",
+      "size" : 24
+    }
+  ]
+}
+```
+
+2. Increase the docker-compose parallel limit:
+```
+export COMPOSE_PARALLEL_LIMIT=1000
+```
+
+3. Boost /etc/sysctl.conf inotify params even further
+```
+fs.inotify.max_user_watches=131072
+fs.inotify.max_user_instances=131072
+```

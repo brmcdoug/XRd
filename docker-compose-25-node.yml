@@ -1,3 +1,5 @@
+# The 25-node topology is comprised of routers xrd00 thru xrd24
+
 services:
 # Ubuntu containers
   source:

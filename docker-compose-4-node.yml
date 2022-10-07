@@ -1,3 +1,5 @@
+# The 4-node topology is comprised of routers xrd31 thru xrd34
+
 services:
 # Ubuntu containers
   source:
@@ -10,11 +12,11 @@ services:
       - NET_ADMIN
     command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.0.25.1 && /bin/sh"
     networks:
-      source-xrd-25:
+      source-xrd25:
         ipv4_address: 10.0.25.2
 
 # XRd
-  xrd-31:
+  xrd31:
     xr_startup_cfg: config/xrd31.cfg
     xr_interfaces:
       - Gi0/0/0/0
@@ -22,7 +24,7 @@ services:
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd-32:
+  xrd32:
     xr_startup_cfg: config/xrd32.cfg
     xr_interfaces:
       - Gi0/0/0/0
@@ -30,7 +32,7 @@ services:
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd-33:
+  xrd33:
     xr_startup_cfg: config/xrd33.cfg
     xr_interfaces:
       - Gi0/0/0/0
@@ -38,7 +40,7 @@ services:
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd-34:
+  xrd34:
     xr_startup_cfg: config/xrd34.cfg
     xr_interfaces:
       - Gi0/0/0/0
@@ -49,32 +51,32 @@ services:
 
 
 xr_l2networks:
-  - ["xrd-31:Gi0/0/0/0", "xrd-32:Gi0/0/0/0"]
-  - ["xrd-31:Gi0/0/0/1", "xrd-33:Gi0/0/0/2"]
-  - ["xrd-32:Gi0/0/0/2", "xrd-34:Gi0/0/0/0"]
-  - ["xrd-33:Gi0/0/0/1", "xrd-34:Gi0/0/0/1"]
+  - ["xrd31:Gi0/0/0/0", "xrd32:Gi0/0/0/0"]
+  - ["xrd31:Gi0/0/0/1", "xrd33:Gi0/0/0/2"]
+  - ["xrd32:Gi0/0/0/2", "xrd34:Gi0/0/0/0"]
+  - ["xrd33:Gi0/0/0/1", "xrd34:Gi0/0/0/1"]
 
 
 networks:
   mgmt:
     xr_interfaces:
-      - xrd-31:Mg0/RP0/CPU0/0
-      - xrd-32:Mg0/RP0/CPU0/0
-      - xrd-33:Mg0/RP0/CPU0/0
-      - xrd-34:Mg0/RP0/CPU0/0
+      - xrd31:Mg0/RP0/CPU0/0
+      - xrd32:Mg0/RP0/CPU0/0
+      - xrd33:Mg0/RP0/CPU0/0
+      - xrd34:Mg0/RP0/CPU0/0
 
     ipam:
       config:
         - subnet: 172.40.0.0/24
-  source-xrd-25:
+  source-xrd25:
     ipam:
       config:
         - subnet: 10.0.25.0/24
     xr_interfaces:
-      - xrd-31:Gi0/0/0/2
-  xrd-29-host:
+      - xrd31:Gi0/0/0/2
+  xrd29-host:
     ipam:
       config:
         - subnet: 10.10.29.0/24
     xr_interfaces:
-      - xrd-34:Gi0/0/0/2
+      - xrd34:Gi0/0/0/2

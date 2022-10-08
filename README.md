@@ -41,6 +41,7 @@ localhost/ios-xr     7.7.1       dd8d741e50b2   2 months ago    1.15GB
 net.bridge.bridge-nf-call-iptables=0
 net.bridge.bridge-nf-call-ip6tables=0
 fs.inotify.max_user_instances=65536
+fs.inotify.max_user_watches=65536
 ```
 9. Reload sysctl:  
 ```

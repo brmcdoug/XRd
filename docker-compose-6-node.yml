@@ -102,6 +102,20 @@ networks:
         - subnet: 10.0.25.0/24
     xr_interfaces:
       - xrd25:Gi0/0/0/2
+  xrd26-host:
+    ipam:
+      config:
+        - subnet: 10.10.26.0/24
+    xr_interfaces:
+      - xrd26:Gi0/0/0/3
+
+  xrd27-host:
+    ipam:
+      config:
+        - subnet: 10.10.27.0/24
+    xr_interfaces:
+      - xrd27:Gi0/0/0/3
+
   xrd29-host:
     ipam:
       config:

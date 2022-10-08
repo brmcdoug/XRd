@@ -71,27 +71,27 @@ docker ps
 ```
 13. access XR cli (note, it will take a couple minutes for the containers to build, so cli won't be immediately available):
 ```
-docker exec -it xrd-27 /pkg/bin/xr_cli.sh
+docker exec -it xrd27 /pkg/bin/xr_cli.sh
 ```
 
 14. Cleanup:
 ```
 docker-compose down
-docker volume rm xrd-25
-docker volume rm xrd-26
-docker volume rm xrd-27
-docker volume rm xrd-28
-docker volume rm xrd-29
-docker volume rm xrd-30
+docker volume rm xrd25
+docker volume rm xrd26
+docker volume rm xrd27
+docker volume rm xrd28
+docker volume rm xrd29
+docker volume rm xrd30
 ```
 
 14. Cleanup if running 4-node topology:
 ```
 docker-compose down
-docker volume rm xrd-31
-docker volume rm xrd-32
-docker volume rm xrd-33
-docker volume rm xrd-34
+docker volume rm xrd31
+docker volume rm xrd32
+docker volume rm xrd33
+docker volume rm xrd34
 
 ```
 

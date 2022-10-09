@@ -12,8 +12,8 @@ services:
       - NET_ADMIN
     command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.0.25.1 && /bin/sh"
     networks:
-      source-xrd25:
-        ipv4_address: 10.0.25.2
+      xrd25-host:
+        ipv4_address: 10.10.25.1
 
 # XRd containers
   xrd25:
@@ -96,10 +96,10 @@ networks:
     ipam:
       config:
         - subnet: 172.40.0.0/24
-  source-xrd25:
+  xrd25-host:
     ipam:
       config:
-        - subnet: 10.0.25.0/24
+        - subnet: 10.10.25.0/24
     xr_interfaces:
       - xrd25:Gi0/0/0/2
   xrd26-host:

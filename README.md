@@ -130,3 +130,4 @@ fs.inotify.max_user_instances=131072
 ```
 
 Currently the 25-node compose script generates some HTTP timeout errors in my env, but the nodes do come up.
+

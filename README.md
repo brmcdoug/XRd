@@ -129,5 +129,11 @@ fs.inotify.max_user_watches=131072
 fs.inotify.max_user_instances=131072
 ```
 
-Currently the 25-node compose script generates some HTTP timeout errors in my env, but the nodes do come up.
+Currently the 25-node compose script generates some HTTP timeout errors in my env, but the nodes do come up. 
+Env workaround for the error:
+
+```
+export DOCKER_CLIENT_TIMEOUT=600
+export COMPOSE_HTTP_TIMEOUT=600
+```
 

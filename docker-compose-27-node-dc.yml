@@ -498,31 +498,31 @@ networks:
       config:
         - subnet: 10.251.254.0/24
 
-  xrd00-host1:
-    ipam:
-      config:
-        - subnet: 10.1.41.0/29
-    xr_interfaces:
-      - xrd00:Gi0/0/0/2
-  xrd00-host2:
-    ipam:
-      config:
-        - subnet: 10.1.40.0/29
-    xr_interfaces:
-      - xrd00:Gi0/0/0/3
+  # xrd00-host1:
+  #   ipam:
+  #     config:
+  #       - subnet: 10.1.41.0/29
+  #   xr_interfaces:
+  #     - xrd00:Gi0/0/0/2
+  # xrd00-host2:
+  #   ipam:
+  #     config:
+  #       - subnet: 10.1.40.0/29
+  #   xr_interfaces:
+  #     - xrd00:Gi0/0/0/3
 
-  xrd01-host1:
-    ipam:
-      config:
-        - subnet: 10.1.41.8/29
-    xr_interfaces:
-      - xrd01:Gi0/0/0/2
-  xrd01-host2:
-    ipam:
-      config:
-        - subnet: 10.1.40.8/29
-    xr_interfaces:
-      - xrd01:Gi0/0/0/3
+  # xrd01-host1:
+  #   ipam:
+  #     config:
+  #       - subnet: 10.1.41.8/29
+  #   xr_interfaces:
+  #     - xrd01:Gi0/0/0/2
+  # xrd01-host2:
+  #   ipam:
+  #     config:
+  #       - subnet: 10.1.40.8/29
+  #   xr_interfaces:
+  #     - xrd01:Gi0/0/0/3
 
   xrd06-host:
     ipam:

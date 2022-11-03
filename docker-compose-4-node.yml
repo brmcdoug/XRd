@@ -16,32 +16,32 @@ services:
         ipv4_address: 10.0.25.2
 
 # XRd
-  xrd31:
-    xr_startup_cfg: config/xrd31.cfg
+  xrd91:
+    xr_startup_cfg: config/xrd91.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd32:
-    xr_startup_cfg: config/xrd32.cfg
+  xrd92:
+    xr_startup_cfg: config/xrd92.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd33:
-    xr_startup_cfg: config/xrd33.cfg
+  xrd93:
+    xr_startup_cfg: config/xrd93.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd34:
-    xr_startup_cfg: config/xrd34.cfg
+  xrd94:
+    xr_startup_cfg: config/xrd94.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -51,19 +51,19 @@ services:
 
 
 xr_l2networks:
-  - ["xrd31:Gi0/0/0/0", "xrd32:Gi0/0/0/0"]
-  - ["xrd31:Gi0/0/0/1", "xrd33:Gi0/0/0/2"]
-  - ["xrd32:Gi0/0/0/2", "xrd34:Gi0/0/0/0"]
-  - ["xrd33:Gi0/0/0/1", "xrd34:Gi0/0/0/1"]
+  - ["xrd91:Gi0/0/0/0", "xrd92:Gi0/0/0/0"]
+  - ["xrd91:Gi0/0/0/1", "xrd93:Gi0/0/0/2"]
+  - ["xrd92:Gi0/0/0/2", "xrd94:Gi0/0/0/0"]
+  - ["xrd93:Gi0/0/0/1", "xrd94:Gi0/0/0/1"]
 
 
 networks:
   mgmt:
     xr_interfaces:
-      - xrd31:Mg0/RP0/CPU0/0
-      - xrd32:Mg0/RP0/CPU0/0
-      - xrd33:Mg0/RP0/CPU0/0
-      - xrd34:Mg0/RP0/CPU0/0
+      - xrd91:Mg0/RP0/CPU0/0
+      - xrd92:Mg0/RP0/CPU0/0
+      - xrd93:Mg0/RP0/CPU0/0
+      - xrd94:Mg0/RP0/CPU0/0
 
     ipam:
       config:
@@ -73,10 +73,10 @@ networks:
       config:
         - subnet: 10.0.25.0/24
     xr_interfaces:
-      - xrd31:Gi0/0/0/2
+      - xrd91:Gi0/0/0/2
   xrd29-host:
     ipam:
       config:
-        - subnet: 10.10.29.0/24
+        - subnet: 10.10.94.0/24
     xr_interfaces:
-      - xrd34:Gi0/0/0/2
+      - xrd94:Gi0/0/0/2

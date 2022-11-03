@@ -10,14 +10,14 @@ services:
     tty: true
     cap_add:
       - NET_ADMIN
-    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.0.25.1 && /bin/sh"
+    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.0.95.1 && /bin/sh"
     networks:
       xrd25-host:
         ipv4_address: 10.10.25.1
 
 # XRd containers
-  xrd25:
-    xr_startup_cfg: config/xrd25.cfg
+  xrd95:
+    xr_startup_cfg: config/xrd95.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -27,9 +27,9 @@ services:
       - Mg0/RP0/CPU0/0
         #    networks:
         #source-xrd25:
-        #ipv4_address: 10.0.25.1
-  xrd26:
-    xr_startup_cfg: config/xrd26.cfg
+        #ipv4_address: 10.0.95.1
+  xrd96:
+    xr_startup_cfg: config/xrd96.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -38,8 +38,8 @@ services:
       - Gi0/0/0/4
       - Gi0/0/0/5
       - Mg0/RP0/CPU0/0
-  xrd27:
-    xr_startup_cfg: config/xrd27.cfg
+  xrd97:
+    xr_startup_cfg: config/xrd97.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -48,24 +48,24 @@ services:
       - Gi0/0/0/4
       - Gi0/0/0/5
       - Mg0/RP0/CPU0/0
-  xrd28:
-    xr_startup_cfg: config/xrd28.cfg
+  xrd98:
+    xr_startup_cfg: config/xrd98.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd29:
-    xr_startup_cfg: config/xrd29.cfg
+  xrd99:
+    xr_startup_cfg: config/xrd99.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Gi0/0/0/2
       - Gi0/0/0/3
       - Mg0/RP0/CPU0/0
-  xrd30:
-    xr_startup_cfg: config/xrd30.cfg
+  xrd100:
+    xr_startup_cfg: config/xrd100.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -74,51 +74,51 @@ services:
       - Mg0/RP0/CPU0/0
 
 xr_l2networks:
-  - ["xrd25:Gi0/0/0/0", "xrd26:Gi0/0/0/2"]
-  - ["xrd25:Gi0/0/0/4", "xrd28:Gi0/0/0/3"]
-  - ["xrd25:Gi0/0/0/1", "xrd30:Gi0/0/0/0"]
-  - ["xrd26:Gi0/0/0/0", "xrd28:Gi0/0/0/0"]
-  - ["xrd27:Gi0/0/0/0", "xrd28:Gi0/0/0/1"]
-  - ["xrd27:Gi0/0/0/1", "xrd29:Gi0/0/0/1"]
-  - ["xrd28:Gi0/0/0/2", "xrd29:Gi0/0/0/0"]
-  - ["xrd30:Gi0/0/0/2", "xrd26:Gi0/0/0/1"]
-  - ["xrd30:Gi0/0/0/1", "xrd27:Gi0/0/0/2"]
+  - ["xrd95:Gi0/0/0/0", "xrd96:Gi0/0/0/2"]
+  - ["xrd95:Gi0/0/0/4", "xrd98:Gi0/0/0/3"]
+  - ["xrd95:Gi0/0/0/1", "xrd90:Gi0/0/0/0"]
+  - ["xrd96:Gi0/0/0/0", "xrd98:Gi0/0/0/0"]
+  - ["xrd97:Gi0/0/0/0", "xrd98:Gi0/0/0/1"]
+  - ["xrd97:Gi0/0/0/1", "xrd99:Gi0/0/0/1"]
+  - ["xrd98:Gi0/0/0/2", "xrd99:Gi0/0/0/0"]
+  - ["xrd100:Gi0/0/0/2", "xrd96:Gi0/0/0/1"]
+  - ["xrd100:Gi0/0/0/1", "xrd97:Gi0/0/0/2"]
 
 networks:
   mgmt:
     xr_interfaces:
-      - xrd27:Mg0/RP0/CPU0/0
-      - xrd25:Mg0/RP0/CPU0/0
-      - xrd26:Mg0/RP0/CPU0/0
-      - xrd28:Mg0/RP0/CPU0/0
-      - xrd29:Mg0/RP0/CPU0/0
-      - xrd30:Mg0/RP0/CPU0/0
+      - xrd97:Mg0/RP0/CPU0/0
+      - xrd95:Mg0/RP0/CPU0/0
+      - xrd96:Mg0/RP0/CPU0/0
+      - xrd98:Mg0/RP0/CPU0/0
+      - xrd99:Mg0/RP0/CPU0/0
+      - xrd100:Mg0/RP0/CPU0/0
     ipam:
       config:
         - subnet: 172.40.0.0/24
-  xrd25-host:
+  xrd95-host:
     ipam:
       config:
-        - subnet: 10.10.25.0/24
+        - subnet: 10.10.95.0/24
     xr_interfaces:
-      - xrd25:Gi0/0/0/2
-  xrd26-host:
+      - xrd95:Gi0/0/0/2
+  xrd96-host:
     ipam:
       config:
-        - subnet: 10.10.26.0/24
+        - subnet: 10.10.96.0/24
     xr_interfaces:
-      - xrd26:Gi0/0/0/3
+      - xrd96:Gi0/0/0/3
 
-  xrd27-host:
+  xrd97-host:
     ipam:
       config:
-        - subnet: 10.10.27.0/24
+        - subnet: 10.10.97.0/24
     xr_interfaces:
-      - xrd27:Gi0/0/0/3
+      - xrd97:Gi0/0/0/3
 
-  xrd29-host:
+  xrd99-host:
     ipam:
       config:
-        - subnet: 10.10.29.0/24
+        - subnet: 10.10.99.0/24
     xr_interfaces:
-      - xrd29:Gi0/0/0/2
+      - xrd99:Gi0/0/0/2

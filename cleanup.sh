@@ -39,3 +39,12 @@ docker volume rm xrd31
 docker volume rm xrd32
 docker volume rm xrd33
 docker volume rm xrd34
+
+docker volume rm xrd40
+docker volume rm xrd41
+docker volume rm xrd42
+docker volume rm xrd43
+docker volume rm xrd44
+docker volume rm xrd45
+docker volume rm xrd46
+docker volume rm xrd47

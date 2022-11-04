@@ -75,29 +75,18 @@ docker ps
 docker exec -it xrd27 /pkg/bin/xr_cli.sh
 ```
 
-14. Cleanup:
+14. Cleanup example: 4-node topology (or just run ./cleanup.sh script)
 ```
 docker-compose down
-docker volume rm xrd25
-docker volume rm xrd26
-docker volume rm xrd27
-docker volume rm xrd28
-docker volume rm xrd29
-docker volume rm xrd30
-```
-
-14. Cleanup if running 4-node topology:
-```
-docker-compose down
-docker volume rm xrd31
-docker volume rm xrd32
-docker volume rm xrd33
-docker volume rm xrd34
+docker volume rm xrd91
+docker volume rm xrd92
+docker volume rm xrd93
+docker volume rm xrd94
 
 ```
 
 
-### 25 node topology
+### 27 node topology
 Tested on bare metal with 32 vCPU and 96G of memory.
 It does require some additional tuning:
 
@@ -118,9 +107,12 @@ It does require some additional tuning:
 }
 ```
 
-2. Increase the docker-compose parallel limit:
+2. Increase the docker-compose parallel limit and timeout threshold:
 ```
 export COMPOSE_PARALLEL_LIMIT=1000
+export DOCKER_CLIENT_TIMEOUT=600
+export COMPOSE_HTTP_TIMEOUT=600
+
 ```
 
 3. Boost /etc/sysctl.conf inotify params even further
@@ -129,11 +121,4 @@ fs.inotify.max_user_watches=131072
 fs.inotify.max_user_instances=131072
 ```
 
-Currently the 25-node compose script generates some HTTP timeout errors in my env, but the nodes do come up. 
-Env workaround for the error:
-
-```
-export DOCKER_CLIENT_TIMEOUT=600
-export COMPOSE_HTTP_TIMEOUT=600
-```
 

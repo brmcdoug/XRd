@@ -27,6 +27,8 @@ docker volume rm xrd21
 docker volume rm xrd22
 docker volume rm xrd23
 docker volume rm xrd24
+docker volume rm xrd25
+docker volume rm xrd26
 
 docker volume rm xrd95
 docker volume rm xrd96

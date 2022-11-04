@@ -260,15 +260,15 @@ services:
       - Gi0/0/0/2
       - Mg0/RP0/CPU0/0
 
-  xrd26:
-    xr_startup_cfg: config/xrd26-RR.cfg
+  xrd25:
+    xr_startup_cfg: config/xrd25.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
       - Mg0/RP0/CPU0/0
 
-  xrd27:
-    xr_startup_cfg: config/xrd27-RR.cfg
+  xrd26:
+    xr_startup_cfg: config/xrd26.cfg
     xr_interfaces:
       - Gi0/0/0/0
       - Gi0/0/0/1
@@ -304,7 +304,7 @@ xr_l2networks:
   - ["xrd07:Gi0/0/0/1", "xrd12:Gi0/0/0/1"]
   - ["xrd07:Gi0/0/0/3", "xrd10:Gi0/0/0/0"]
   - ["xrd07:Gi0/0/0/4", "xrd09:Gi0/0/0/0"]
-  - ["xrd07:Gi0/0/0/5", "xrd27:Gi0/0/0/0"]
+  - ["xrd07:Gi0/0/0/5", "xrd25:Gi0/0/0/0"]
 
   - ["xrd08:Gi0/0/0/1", "xrd09:Gi0/0/0/1"]
   - ["xrd08:Gi0/0/0/2", "xrd10:Gi0/0/0/1"]
@@ -370,8 +370,8 @@ networks:
       - xrd22:Mg0/RP0/CPU0/0
       - xrd23:Mg0/RP0/CPU0/0
       - xrd24:Mg0/RP0/CPU0/0
+      - xrd25:Mg0/RP0/CPU0/0
       - xrd26:Mg0/RP0/CPU0/0
-      - xrd27:Mg0/RP0/CPU0/0
     ipam:
       config:
         - subnet: 10.251.254.0/24

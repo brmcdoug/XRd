@@ -485,7 +485,7 @@ networks:
       - xrd23:Mg0/RP0/CPU0/0
       - xrd24:Mg0/RP0/CPU0/0
       - xrd26:Mg0/RP0/CPU0/0
-      - xrdr25:Mg0/RP0/CPU0/0
+      - xrd25:Mg0/RP0/CPU0/0
       - xrd40:Mg0/RP0/CPU0/0
       - xrd41:Mg0/RP0/CPU0/0
       - xrd42:Mg0/RP0/CPU0/0

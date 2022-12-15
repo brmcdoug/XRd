@@ -274,6 +274,8 @@ services:
       - Gi0/0/0/1
       - Mg0/RP0/CPU0/0
 
+# DC routers
+
   xrd40:
     xr_startup_cfg: config/xrd40.cfg
     xr_interfaces:

@@ -548,34 +548,6 @@ xr_l2networks:
   - ["xrd45:Gi0/0/0/2", "xrd46:Gi0/0/0/3"]
   - ["xrd45:Gi0/0/0/3", "xrd47:Gi0/0/0/3"]
 
-
-  - ["xrd40:Gi0/0/0/0", "xrd00:Gi0/0/0/3"]
-  - ["xrd40:Gi0/0/0/1", "xrd01:Gi0/0/0/3"]
-  - ["xrd40:Gi0/0/0/2", "xrd42:Gi0/0/0/0"]
-  - ["xrd40:Gi0/0/0/3", "xrd43:Gi0/0/0/0"]
-  - ["xrd40:Gi0/0/0/4", "xrd44:Gi0/0/0/0"]
-  - ["xrd40:Gi0/0/0/5", "xrd45:Gi0/0/0/0"]
-
-  - ["xrd41:Gi0/0/0/0", "xrd00:Gi0/0/0/2"]
-  - ["xrd41:Gi0/0/0/1", "xrd01:Gi0/0/0/2"]
-  - ["xrd41:Gi0/0/0/2", "xrd42:Gi0/0/0/1"]
-  - ["xrd41:Gi0/0/0/3", "xrd43:Gi0/0/0/1"]
-  - ["xrd41:Gi0/0/0/4", "xrd44:Gi0/0/0/1"]
-  - ["xrd41:Gi0/0/0/5", "xrd45:Gi0/0/0/1"]
-
-  - ["xrd42:Gi0/0/0/2", "xrd46:Gi0/0/0/0"]
-  - ["xrd42:Gi0/0/0/3", "xrd47:Gi0/0/0/0"]
-
-  - ["xrd43:Gi0/0/0/2", "xrd46:Gi0/0/0/1"]
-  - ["xrd43:Gi0/0/0/3", "xrd47:Gi0/0/0/1"]
-
-  - ["xrd44:Gi0/0/0/2", "xrd46:Gi0/0/0/2"]
-  - ["xrd44:Gi0/0/0/3", "xrd47:Gi0/0/0/2"]
-
-  - ["xrd45:Gi0/0/0/2", "xrd46:Gi0/0/0/3"]
-  - ["xrd45:Gi0/0/0/3", "xrd47:Gi0/0/0/3"]
-
-
   - ["xrd60:Gi0/0/0/0", "xrd13:Gi0/0/0/3"]
   - ["xrd60:Gi0/0/0/1", "xrd14:Gi0/0/0/3"]
   - ["xrd60:Gi0/0/0/2", "xrd62:Gi0/0/0/0"]
@@ -641,6 +613,14 @@ networks:
       - xrd45:Mg0/RP0/CPU0/0
       - xrd46:Mg0/RP0/CPU0/0
       - xrd47:Mg0/RP0/CPU0/0
+      - xrd60:Mg0/RP0/CPU0/0
+      - xrd61:Mg0/RP0/CPU0/0
+      - xrd62:Mg0/RP0/CPU0/0
+      - xrd63:Mg0/RP0/CPU0/0
+      - xrd64:Mg0/RP0/CPU0/0
+      - xrd65:Mg0/RP0/CPU0/0
+      - xrd66:Mg0/RP0/CPU0/0
+      - xrd67:Mg0/RP0/CPU0/0
     ipam:
       config:
         - subnet: 10.251.254.0/24
@@ -731,3 +711,17 @@ networks:
         - subnet: 10.10.47.0/24
     xr_interfaces:
       - xrd47:Gi0/0/0/4
+
+  xrd66-host:
+    ipam:
+      config:
+        - subnet: 10.10.66.0/24
+    xr_interfaces:
+      - xrd66:Gi0/0/0/4
+
+  xrd67-host:
+    ipam:
+      config:
+        - subnet: 10.10.67.0/24
+    xr_interfaces:
+      - xrd67:Gi0/0/0/4

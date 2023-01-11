@@ -235,17 +235,17 @@ segment-routing
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:15::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:15::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:15::/48
     algorithm 130
    !
   !

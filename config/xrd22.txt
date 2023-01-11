@@ -1,4 +1,4 @@
-hostname xrd05
+hostname xrd22
 username cisco
  group root-lr
  group cisco-support
@@ -44,36 +44,36 @@ netconf-yang agent
  ssh
 !
 interface Loopback0
- ipv4 address 10.0.0.5 255.255.255.255
- ipv6 address fc00:0:5::1/128
+ ipv4 address 10.0.0.22 255.255.255.255
+ ipv6 address fc00:0:22::1/128
 !
 interface MgmtEth0/RP0/CPU0/0
  description mgt
- ipv4 address 10.251.254.105 255.255.255.0
+ ipv4 address 10.251.254.122 255.255.255.0
 !
 interface GigabitEthernet0/0/0/0
- description to xrd04
+ description to xrd23
  cdp
- ipv4 address 10.1.1.35 255.255.255.254
- ipv6 address 2001:1:1:1::35/127
+ ipv4 address 10.1.1.100 255.255.255.254
+ ipv6 address 2001:1:1:1::100/127
 !
 interface GigabitEthernet0/0/0/1
- description to xrd07
- cdp
- ipv4 address 10.1.1.40 255.255.255.254
- ipv6 address 2001:1:1:1::40/127
-!
-interface GigabitEthernet0/0/0/2
  description to xrd03
  cdp
- ipv4 address 10.1.1.27 255.255.255.254
- ipv6 address 2001:1:1:1::27/127
+ ipv4 address 10.1.1.33 255.255.255.254
+ ipv6 address 2001:1:1:1::33/127
+!
+interface GigabitEthernet0/0/0/2
+ description to xrd18
+ cdp
+ ipv4 address 10.1.1.89 255.255.255.254
+ ipv6 address 2001:1:1:1::89/127
 !
 interface GigabitEthernet0/0/0/3
- description to xrd06
+ description to xrd24
  cdp
- ipv4 address 10.1.1.42 255.255.255.254
- ipv6 address 2001:1:1:1::42/127
+ ipv4 address 10.1.1.102 255.255.255.254
+ ipv6 address 2001:1:1:1::102/127
 !
 route-policy drop
   drop
@@ -84,7 +84,7 @@ route-policy pass
 end-policy
 !
 router isis 100
- net 49.0901.0000.0000.0005.00
+ net 49.0901.0000.0000.0022.00
  nsf ietf
  affinity-map red bit-position 1
  affinity-map blue bit-position 3
@@ -135,7 +135,7 @@ router isis 100
  interface Loopback0
   passive
   address-family ipv4 unicast
-   prefix-sid index 5
+   prefix-sid index 22
   !
   address-family ipv6 unicast
   !
@@ -231,26 +231,26 @@ segment-routing
  global-block 100000 163999
  srv6
   encapsulation
-   source-address fc00:0:5::1
+   source-address fc00:0:22::1
   !
   locators
    locator MAIN
     micro-segment behavior unode psp-usd
-    prefix fc00:0:5::/48
+    prefix fc00:0:22::/48
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:22::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:22::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:22::/48
     algorithm 130
    !
   !

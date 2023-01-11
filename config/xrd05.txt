@@ -1,4 +1,4 @@
-hostname xrd11
+hostname xrd05
 username cisco
  group root-lr
  group cisco-support
@@ -44,54 +44,36 @@ netconf-yang agent
  ssh
 !
 interface Loopback0
- ipv4 address 10.0.0.11 255.255.255.255
- ipv6 address fc00:0:11::1/128
+ ipv4 address 10.0.0.5 255.255.255.255
+ ipv6 address fc00:0:5::1/128
 !
 interface MgmtEth0/RP0/CPU0/0
  description mgt
- ipv4 address 10.251.254.111 255.255.255.0
+ ipv4 address 10.251.254.105 255.255.255.0
 !
 interface GigabitEthernet0/0/0/0
- description to xrd12
+ description to xrd04
  cdp
- ipv4 address 10.1.1.58 255.255.255.254
- ipv6 address 2001:1:1:1::58/127
+ ipv4 address 10.1.1.35 255.255.255.254
+ ipv6 address 2001:1:1:1::35/127
 !
 interface GigabitEthernet0/0/0/1
- description to xrd16
+ description to xrd07
  cdp
- ipv4 address 10.1.1.60 255.255.255.254
- ipv6 address 2001:1:1:1::60/127
+ ipv4 address 10.1.1.40 255.255.255.254
+ ipv6 address 2001:1:1:1::40/127
 !
 interface GigabitEthernet0/0/0/2
- description to xrd19
+ description to xrd03
  cdp
- ipv4 address 10.1.1.62 255.255.255.254
- ipv6 address 2001:1:1:1::62/127
+ ipv4 address 10.1.1.27 255.255.255.254
+ ipv6 address 2001:1:1:1::27/127
 !
 interface GigabitEthernet0/0/0/3
- description to xrd02
+ description to xrd06
  cdp
- ipv4 address 10.1.1.19 255.255.255.254
- ipv6 address 2001:1:1:1::19/127
-!
-interface GigabitEthernet0/0/0/4
- description to xrd08
- cdp
- ipv4 address 10.1.1.57 255.255.255.254
- ipv6 address 2001:1:1:1::57/127
-!
-interface GigabitEthernet0/0/0/5
- description to xrd13
- cdp
- ipv4 address 10.1.1.64 255.255.255.254
- ipv6 address 2001:1:1:1::64/127
-!
-interface GigabitEthernet0/0/0/6
- description to xrd14
- cdp
- ipv4 address 10.1.1.66 255.255.255.254
- ipv6 address 2001:1:1:1::66/127
+ ipv4 address 10.1.1.42 255.255.255.254
+ ipv6 address 2001:1:1:1::42/127
 !
 route-policy drop
   drop
@@ -102,7 +84,7 @@ route-policy pass
 end-policy
 !
 router isis 100
- net 49.0901.0000.0000.0011.00
+ net 49.0901.0000.0000.0005.00
  nsf ietf
  affinity-map red bit-position 1
  affinity-map blue bit-position 3
@@ -153,14 +135,14 @@ router isis 100
  interface Loopback0
   passive
   address-family ipv4 unicast
-   prefix-sid index 11
+   prefix-sid index 5
   !
   address-family ipv6 unicast
   !
  !
  interface GigabitEthernet0/0/0/0
   circuit-type level-2-only
-  affinity flex-algo red green blue
+  affinity flex-algo red blue green
   point-to-point
   address-family ipv4 unicast
    fast-reroute per-prefix level 2
@@ -181,7 +163,7 @@ router isis 100
  !
  interface GigabitEthernet0/0/0/1
   circuit-type level-2-only
-  affinity flex-algo red green
+  affinity flex-algo red blue
   point-to-point
   address-family ipv4 unicast
    fast-reroute per-prefix level 2
@@ -202,7 +184,7 @@ router isis 100
  !
  interface GigabitEthernet0/0/0/2
   circuit-type level-2-only
-  affinity flex-algo red green
+  affinity flex-algo red blue
   point-to-point
   address-family ipv4 unicast
    fast-reroute per-prefix level 2
@@ -223,70 +205,7 @@ router isis 100
  !
  interface GigabitEthernet0/0/0/3
   circuit-type level-2-only
-  affinity flex-algo red green
-  point-to-point
-  address-family ipv4 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
-  address-family ipv6 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
- !
- interface GigabitEthernet0/0/0/4
-  circuit-type level-2-only
-  affinity flex-algo red green
-  point-to-point
-  address-family ipv4 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
-  address-family ipv6 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
- !
- interface GigabitEthernet0/0/0/5
-  circuit-type level-2-only
-  affinity flex-algo red green
-  point-to-point
-  address-family ipv4 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
-  address-family ipv6 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix tiebreaker node-protecting index 200
-   fast-reroute per-prefix tiebreaker srlg-disjoint index 100
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
- !
- interface GigabitEthernet0/0/0/6
-  circuit-type level-2-only
-  affinity flex-algo red green
+  affinity flex-algo red blue
   point-to-point
   address-family ipv4 unicast
    fast-reroute per-prefix level 2
@@ -312,26 +231,26 @@ segment-routing
  global-block 100000 163999
  srv6
   encapsulation
-   source-address fc00:0:11::1
+   source-address fc00:0:5::1
   !
   locators
    locator MAIN
     micro-segment behavior unode psp-usd
-    prefix fc00:0:11::/48
+    prefix fc00:0:5::/48
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:5::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:5::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:5::/48
     algorithm 130
    !
   !
@@ -347,37 +266,22 @@ ssh server netconf vrf default
 performance-measurement
  interface GigabitEthernet0/0/0/0
   delay-measurement
-   advertise-delay 10
+   advertise-delay 100
   !
  !
  interface GigabitEthernet0/0/0/1
   delay-measurement
-   advertise-delay 10
+   advertise-delay 100
   !
  !
  interface GigabitEthernet0/0/0/2
   delay-measurement
-   advertise-delay 10
+   advertise-delay 100
   !
  !
  interface GigabitEthernet0/0/0/3
   delay-measurement
-   advertise-delay 10
-  !
- !
- interface GigabitEthernet0/0/0/4
-  delay-measurement
-   advertise-delay 10
-  !
- !
- interface GigabitEthernet0/0/0/5
-  delay-measurement
-   advertise-delay 10
-  !
- !
- interface GigabitEthernet0/0/0/6
-  delay-measurement
-   advertise-delay 10
+   advertise-delay 100
   !
  !
 !

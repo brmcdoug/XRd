@@ -1,4 +1,4 @@
-hostname xrd01
+hostname xrd00
 username cisco
  group root-lr
  group cisco-support
@@ -116,58 +116,90 @@ netconf-yang agent
  ssh
 !
 interface Loopback0
- ipv6 address fc00:0:1::1/128
+ ipv6 address fc00::1/128
 !
 interface Loopback1
- ipv4 address 10.0.0.1 255.255.255.255
+ ipv4 address 10.0.0.0 255.255.255.255
 !
 interface Loopback9
  vrf red
- ipv4 address 10.9.1.1 255.255.255.0
- ipv6 address 10:9:1::1/128
+ ipv4 address 10.9.0.1 255.255.255.0
+ ipv6 address 10:9::1/128
 !
 interface Loopback10
  vrf main
- ipv4 address 10.10.1.1 255.255.255.0
- ipv6 address 10:10:1::1/128
+ ipv4 address 10.10.0.1 255.255.255.0
+ ipv6 address 10:10::1/128
 !
 interface Loopback11
  vrf green
- ipv4 address 10.11.1.1 255.255.255.0
- ipv6 address 10:11:1::1/128
+ ipv4 address 10.11.0.1 255.255.255.0
+ ipv6 address 10:11::1/128
 !
 interface Loopback12
  vrf blue
- ipv4 address 10.12.1.1 255.255.255.0
- ipv6 address 10:12:1::1/128
+ ipv4 address 10.12.0.1 255.255.255.0
+ ipv6 address 10:12::1/128
 !
 interface MgmtEth0/RP0/CPU0/0
  description mgt
- ipv4 address 10.251.254.101 255.255.255.0
+ ipv4 address 10.251.254.100 255.255.255.0
 !
 interface GigabitEthernet0/0/0/0
- description to r02
+ description to xrd02
  cdp
- ipv4 address 10.1.1.8 255.255.255.254
- ipv6 address 2001:1:1:1::8/127
+ ipv4 address 10.1.1.0 255.255.255.254
+ ipv6 address 2001:1:1:1::/127
 !
 interface GigabitEthernet0/0/0/1
- description to r03
+ description to xrd03
  cdp
- ipv4 address 10.1.1.10 255.255.255.254
- ipv6 address 2001:1:1:1::10/127
+ ipv4 address 10.1.1.2 255.255.255.254
+ ipv6 address 2001:1:1:1::2/127
 !
 interface GigabitEthernet0/0/0/2
  description to nx41
  cdp
- ipv4 address 10.1.41.10 255.255.255.248
- ipv6 address 2001:1:1:41::9/125
+ ipv4 address 10.1.41.2 255.255.255.248
+ ipv6 address 2001:1:1:41::2/125
 !
 interface GigabitEthernet0/0/0/3
  description to nx40
  cdp
- ipv4 address 10.1.40.10 255.255.255.248
- ipv6 address 2001:1:1:40::9/125
+ ipv4 address 10.1.40.2 255.255.255.248
+ ipv6 address 2001:1:1:40::2/125
+!
+extcommunity-set rt red-rt-set_v4
+  9:9
+end-set
+!
+extcommunity-set rt blue-rt-set_v4
+  12:12
+end-set
+!
+extcommunity-set rt main-rt-set_v4
+  10:10
+end-set
+!
+extcommunity-set rt green-rt-set_v4
+  11:11
+end-set
+!
+extcommunity-set opaque COLOR_10
+  10
+end-set
+!
+extcommunity-set opaque COLOR_20
+  20
+end-set
+!
+extcommunity-set opaque COLOR_30
+  30
+end-set
+!
+extcommunity-set opaque COLOR_40
+  40
+end-set
 !
 extcommunity-set opaque COLOR_100
   100
@@ -229,8 +261,22 @@ route-policy SET_COLOR_VPNV4
   endif
 end-policy
 !
+route-policy SET_COLOR_ALL_VPNV4
+  if extcommunity rt matches-any red-rt-set_v4 then
+    set extcommunity color COLOR_10
+  elseif extcommunity rt matches-any main-rt-set_v4 then
+    set extcommunity color COLOR_20
+  elseif extcommunity rt matches-any green-rt-set_v4 then
+    set extcommunity color COLOR_30
+  elseif extcommunity rt matches-any blue-rt-set_v4 then
+    set extcommunity color COLOR_40
+  else
+    pass
+  endif
+end-policy
+!
 router isis 100
- net 49.0901.0000.0000.0001.00
+ net 49.0901.0000.0000.0000.00
  distribute link-state instance-id 65000 level 2
  nsf ietf
  affinity-map red bit-position 1
@@ -287,7 +333,7 @@ router isis 100
  interface Loopback1
   passive
   address-family ipv4 unicast
-   prefix-sid index 1
+   prefix-sid index 0
    prefix-sid algorithm 128 index 128
    prefix-sid algorithm 129 index 129
    prefix-sid algorithm 130 index 130
@@ -337,10 +383,7 @@ router isis 100
  !
 !
 router bgp 65000
- bgp router-id 10.0.0.1
- segment-routing srv6
-  locator LATENCY_3
- !
+ bgp router-id 10.0.0.0
  bgp bestpath as-path multipath-relax
  address-family ipv4 unicast
   additional-paths receive
@@ -348,7 +391,7 @@ router bgp 65000
   segment-routing srv6
    locator MAIN
   !
-  network 10.0.0.0/32 route-policy SID(1)
+  network 10.0.0.0/32 route-policy SID(0)
   allocate-label all
  !
  address-family vpnv4 unicast
@@ -360,7 +403,7 @@ router bgp 65000
   segment-routing srv6
    locator MAIN
   !
-  network fc00:0:1::1/128
+  network fc00::1/128
  !
  address-family vpnv6 unicast
  !
@@ -397,7 +440,7 @@ router bgp 65000
    next-hop-self
   !
   address-family vpnv4 unicast
-   route-policy SET_COLOR_VPNV4 out
+   route-policy SET_COLOR_ALL_VPNV4 out
    next-hop-self
   !
   address-family link-state link-state
@@ -405,12 +448,12 @@ router bgp 65000
    route-policy pass out
   !
  !
- neighbor 10.1.40.11
+ neighbor 10.1.40.3
   remote-as 65040
   use neighbor-group ebgp-v4
   description eBGPv4 to nx40
  !
- neighbor 10.1.41.11
+ neighbor 10.1.41.3
   remote-as 65040
   use neighbor-group ebgp-v4
   description eBGPv4 to nx41
@@ -437,12 +480,12 @@ router bgp 65000
    route-policy pass out
   !
  !
- neighbor 2001:1:1:40::11
+ neighbor 2001:1:1:40::3
   remote-as 65040
   use neighbor-group ebgp-v6
   description eBGPv6 to nx40
  !
- neighbor 2001:1:1:41::11
+ neighbor 2001:1:1:41::3
   remote-as 65040
   use neighbor-group ebgp-v6
   description eBGPv6 to nx41
@@ -530,6 +573,42 @@ mpls oam
 segment-routing
  global-block 100000 163999
  traffic-eng
+  on-demand color 10
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 20
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 30
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 40
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
   on-demand color 100
    srv6
     locator MAIN binding-sid dynamic behavior ub6-insert-reduced
@@ -552,7 +631,7 @@ segment-routing
    !
   !
   pcc
-   source-address ipv6 fc00:0:1::1
+   source-address ipv6 fc00::1
    pce address ipv6 fc00:0:6::1
     precedence 100
    !
@@ -560,26 +639,26 @@ segment-routing
  !
  srv6
   encapsulation
-   source-address fc00:0:1::1
+   source-address fc00::1
   !
   locators
    locator MAIN
     micro-segment behavior unode psp-usd
-    prefix fc00:0:1::/48
+    prefix fc00:0:99::/48
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:99::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:99::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:99::/48
     algorithm 130
    !
   !

@@ -1,4 +1,4 @@
-hostname xrd08
+hostname xrd23
 username cisco
  group root-lr
  group cisco-support
@@ -44,42 +44,36 @@ netconf-yang agent
  ssh
 !
 interface Loopback0
- ipv4 address 10.0.0.8 255.255.255.255
- ipv6 address fc00:0:8::1/128
+ ipv4 address 10.0.0.23 255.255.255.255
+ ipv6 address fc00:0:23::1/128
 !
 interface MgmtEth0/RP0/CPU0/0
  description mgt
- ipv4 address 10.251.254.108 255.255.255.0
+ ipv4 address 10.251.254.123 255.255.255.0
 !
 interface GigabitEthernet0/0/0/0
- description to xrd07
+ description to xrd22
  cdp
- ipv4 address 10.1.1.45 255.255.255.254
- ipv6 address 2001:1:1:1::45/127
+ ipv4 address 10.1.1.101 255.255.255.254
+ ipv6 address 2001:1:1:1::101/127
 !
 interface GigabitEthernet0/0/0/1
- description to xrd09
+ description to xrd02
  cdp
- ipv4 address 10.1.1.52 255.255.255.254
- ipv6 address 2001:1:1:1::52/127
+ ipv4 address 10.1.1.25 255.255.255.254
+ ipv6 address 2001:1:1:1::25/127
 !
 interface GigabitEthernet0/0/0/2
- description to xrd10
+ description to xrd24
  cdp
- ipv4 address 10.1.1.54 255.255.255.254
- ipv6 address 2001:1:1:1::54/127
+ ipv4 address 10.1.1.104 255.255.255.254
+ ipv6 address 2001:1:1:1::104/127
 !
 interface GigabitEthernet0/0/0/3
- description to xrd11
+ description to xrd19
  cdp
- ipv4 address 10.1.1.56 255.255.255.254
- ipv6 address 2001:1:1:1::56/127
-!
-interface GigabitEthernet0/0/0/4
- description to xrd04
- cdp
- ipv4 address 10.1.1.37 255.255.255.254
- ipv6 address 2001:1:1:1::37/127
+ ipv4 address 10.1.1.95 255.255.255.254
+ ipv6 address 2001:1:1:1::95/127
 !
 route-policy drop
   drop
@@ -90,7 +84,7 @@ route-policy pass
 end-policy
 !
 router isis 100
- net 49.0901.0000.0000.0008.00
+ net 49.0901.0000.0000.0023.00
  nsf ietf
  affinity-map red bit-position 1
  affinity-map blue bit-position 3
@@ -141,7 +135,7 @@ router isis 100
  interface Loopback0
   passive
   address-family ipv4 unicast
-   prefix-sid index 8
+   prefix-sid index 23
   !
   address-family ipv6 unicast
   !
@@ -230,23 +224,6 @@ router isis 100
    metric 1
   !
  !
- interface GigabitEthernet0/0/0/4
-  circuit-type level-2-only
-  affinity flex-algo red green
-  point-to-point
-  address-family ipv4 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
-  address-family ipv6 unicast
-   fast-reroute per-prefix level 2
-   fast-reroute per-prefix ti-lfa
-   fast-reroute per-prefix ti-lfa level 2
-   metric 1
-  !
- !
 !
 mpls oam
 !
@@ -254,26 +231,26 @@ segment-routing
  global-block 100000 163999
  srv6
   encapsulation
-   source-address fc00:0:8::1
+   source-address fc00:0:23::1
   !
   locators
    locator MAIN
     micro-segment behavior unode psp-usd
-    prefix fc00:0:8::/48
+    prefix fc00:0:23::/48
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:23::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:23::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:23::/48
     algorithm 130
    !
   !

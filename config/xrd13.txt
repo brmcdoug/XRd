@@ -169,6 +169,38 @@ interface GigabitEthernet0/0/0/3
  ipv4 address 10.1.60.2 255.255.255.248
  ipv6 address 2001:1:1:60::2/125
 !
+extcommunity-set rt red-rt-set_v4
+  9:9
+end-set
+!
+extcommunity-set rt blue-rt-set_v4
+  12:12
+end-set
+!
+extcommunity-set rt main-rt-set_v4
+  10:10
+end-set
+!
+extcommunity-set rt green-rt-set_v4
+  11:11
+end-set
+!
+extcommunity-set opaque COLOR_10
+  10
+end-set
+!
+extcommunity-set opaque COLOR_20
+  20
+end-set
+!
+extcommunity-set opaque COLOR_30
+  30
+end-set
+!
+extcommunity-set opaque COLOR_40
+  40
+end-set
+!
 extcommunity-set opaque COLOR_100
   100
 end-set
@@ -224,6 +256,20 @@ end-policy
 route-policy SET_COLOR_VPNV4
   if destination in (0.0.0.0/0 le 32) then
     set extcommunity color COLOR_200
+  else
+    pass
+  endif
+end-policy
+!
+route-policy SET_COLOR_ALL_VPNV4
+  if extcommunity rt matches-any red-rt-set_v4 then
+    set extcommunity color COLOR_10
+  elseif extcommunity rt matches-any main-rt-set_v4 then
+    set extcommunity color COLOR_20
+  elseif extcommunity rt matches-any green-rt-set_v4 then
+    set extcommunity color COLOR_30
+  elseif extcommunity rt matches-any blue-rt-set_v4 then
+    set extcommunity color COLOR_40
   else
     pass
   endif
@@ -338,9 +384,6 @@ router isis 100
 !
 router bgp 65000
  bgp router-id 10.0.0.13
- segment-routing srv6
-  locator LATENCY_3
- !
  bgp bestpath as-path multipath-relax
  address-family ipv4 unicast
   additional-paths receive
@@ -397,7 +440,7 @@ router bgp 65000
    next-hop-self
   !
   address-family vpnv4 unicast
-   route-policy SET_COLOR_VPNV4 out
+   route-policy SET_COLOR_ALL_VPNV4 out
    next-hop-self
   !
  !
@@ -526,6 +569,42 @@ mpls oam
 segment-routing
  global-block 100000 163999
  traffic-eng
+  on-demand color 10
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 20
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 30
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 40
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
   on-demand color 100
    srv6
     locator MAIN binding-sid dynamic behavior ub6-insert-reduced
@@ -565,17 +644,17 @@ segment-routing
    !
    locator LATENCY_1
     micro-segment behavior unode psp-usd
-    prefix fc00:1:1::/48
+    prefix fc00:1:13::/48
     algorithm 128
    !
    locator LATENCY_2
     micro-segment behavior unode psp-usd
-    prefix fc00:2:1::/48
+    prefix fc00:2:13::/48
     algorithm 129
    !
    locator LATENCY_3
     micro-segment behavior unode psp-usd
-    prefix fc00:3:1::/48
+    prefix fc00:3:13::/48
     algorithm 130
    !
   !

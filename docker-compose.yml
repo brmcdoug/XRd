@@ -1,7 +1,7 @@
 networks:
   mgmt:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-51
+      com.docker.network.container_iface_prefix: xr-91
     ipam:
       config:
       - subnet: 10.251.254.0/24
@@ -15,18 +15,6 @@ networks:
       com.docker.network.container_iface_prefix: xr-1
     internal: true
     name: xrd00-gi1-xrd03-gi6
-  xrd00-host1:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-52
-    ipam:
-      config:
-      - subnet: 10.1.41.0/29
-  xrd00-host2:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-53
-    ipam:
-      config:
-      - subnet: 10.1.40.0/29
   xrd01-gi0-xrd02-gi5:
     driver_opts:
       com.docker.network.container_iface_prefix: xr-2
@@ -37,18 +25,6 @@ networks:
       com.docker.network.container_iface_prefix: xr-3
     internal: true
     name: xrd01-gi1-xrd03-gi5
-  xrd01-host1:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-54
-    ipam:
-      config:
-      - subnet: 10.1.41.8/29
-  xrd01-host2:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-55
-    ipam:
-      config:
-      - subnet: 10.1.40.8/29
   xrd02-gi0-xrd03-gi0:
     driver_opts:
       com.docker.network.container_iface_prefix: xr-4
@@ -126,7 +102,7 @@ networks:
     name: xrd05-gi4-xrd26-gi0
   xrd06-host:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-56
+      com.docker.network.container_iface_prefix: xr-92
     ipam:
       config:
       - subnet: 10.10.6.0/24
@@ -172,25 +148,25 @@ networks:
     name: xrd08-gi3-xrd11-gi4
   xrd09-host1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-57
+      com.docker.network.container_iface_prefix: xr-93
     ipam:
       config:
       - subnet: 10.10.51.0/29
   xrd09-host2:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-58
+      com.docker.network.container_iface_prefix: xr-94
     ipam:
       config:
       - subnet: 10.10.50.0/29
   xrd10-host1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-59
+      com.docker.network.container_iface_prefix: xr-95
     ipam:
       config:
       - subnet: 10.10.51.8/29
   xrd10-host2:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-60
+      com.docker.network.container_iface_prefix: xr-96
     ipam:
       config:
       - subnet: 10.10.50.8/29
@@ -239,30 +215,6 @@ networks:
       com.docker.network.container_iface_prefix: xr-35
     internal: true
     name: xrd12-gi6-xrd14-gi1
-  xrd13-host1:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-61
-    ipam:
-      config:
-      - subnet: 10.1.61.0/29
-  xrd13-host2:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-62
-    ipam:
-      config:
-      - subnet: 10.1.60.0/29
-  xrd14-host1:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-63
-    ipam:
-      config:
-      - subnet: 10.1.61.8/29
-  xrd14-host2:
-    driver_opts:
-      com.docker.network.container_iface_prefix: xr-64
-    ipam:
-      config:
-      - subnet: 10.1.60.8/29
   xrd15-gi0-xrd16-gi0:
     driver_opts:
       com.docker.network.container_iface_prefix: xr-36
@@ -290,7 +242,7 @@ networks:
     name: xrd16-gi3-xrd17-gi1
   xrd17-host:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-65
+      com.docker.network.container_iface_prefix: xr-97
     ipam:
       config:
       - subnet: 10.10.17.0/24
@@ -331,25 +283,25 @@ networks:
     name: xrd19-gi5-xrd20-gi1
   xrd20-host1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-66
+      com.docker.network.container_iface_prefix: xr-98
     ipam:
       config:
       - subnet: 10.10.53.8/29
   xrd20-host2:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-67
+      com.docker.network.container_iface_prefix: xr-99
     ipam:
       config:
       - subnet: 10.10.52.8/29
   xrd21-host1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-68
+      com.docker.network.container_iface_prefix: xr-100
     ipam:
       config:
       - subnet: 10.10.53.0/29
   xrd21-host2:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-69
+      com.docker.network.container_iface_prefix: xr-101
     ipam:
       config:
       - subnet: 10.10.52.0/29
@@ -370,20 +322,344 @@ networks:
     name: xrd23-gi2-xrd24-gi1
   xrd24-host:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-70
+      com.docker.network.container_iface_prefix: xr-102
     ipam:
       config:
       - subnet: 10.10.24.0/24
   xrd25-gi1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-71
+      com.docker.network.container_iface_prefix: xr-107
     internal: true
     name: xrd25-gi1
   xrd26-gi1:
     driver_opts:
-      com.docker.network.container_iface_prefix: xr-72
+      com.docker.network.container_iface_prefix: xr-108
     internal: true
     name: xrd26-gi1
+  xrd40-gi0-xrd00-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-51
+    internal: true
+    name: xrd40-gi0-xrd00-gi3
+  xrd40-gi1-xrd01-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-52
+    internal: true
+    name: xrd40-gi1-xrd01-gi3
+  xrd40-gi2-xrd42-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-53
+    internal: true
+    name: xrd40-gi2-xrd42-gi0
+  xrd40-gi3-xrd43-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-54
+    internal: true
+    name: xrd40-gi3-xrd43-gi0
+  xrd40-gi4-xrd44-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-55
+    internal: true
+    name: xrd40-gi4-xrd44-gi0
+  xrd40-gi5-xrd45-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-56
+    internal: true
+    name: xrd40-gi5-xrd45-gi0
+  xrd41-gi0-xrd00-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-57
+    internal: true
+    name: xrd41-gi0-xrd00-gi2
+  xrd41-gi1-xrd01-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-58
+    internal: true
+    name: xrd41-gi1-xrd01-gi2
+  xrd41-gi2-xrd42-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-59
+    internal: true
+    name: xrd41-gi2-xrd42-gi1
+  xrd41-gi3-xrd43-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-60
+    internal: true
+    name: xrd41-gi3-xrd43-gi1
+  xrd41-gi4-xrd44-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-61
+    internal: true
+    name: xrd41-gi4-xrd44-gi1
+  xrd41-gi5-xrd45-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-62
+    internal: true
+    name: xrd41-gi5-xrd45-gi1
+  xrd42-gi2-xrd46-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-63
+    internal: true
+    name: xrd42-gi2-xrd46-gi0
+  xrd42-gi3-xrd47-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-64
+    internal: true
+    name: xrd42-gi3-xrd47-gi0
+  xrd42-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-109
+    internal: true
+    name: xrd42-gi4
+  xrd42-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-110
+    internal: true
+    name: xrd42-gi5
+  xrd43-gi2-xrd46-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-65
+    internal: true
+    name: xrd43-gi2-xrd46-gi1
+  xrd43-gi3-xrd47-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-66
+    internal: true
+    name: xrd43-gi3-xrd47-gi1
+  xrd43-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-111
+    internal: true
+    name: xrd43-gi4
+  xrd43-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-112
+    internal: true
+    name: xrd43-gi5
+  xrd44-gi2-xrd46-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-67
+    internal: true
+    name: xrd44-gi2-xrd46-gi2
+  xrd44-gi3-xrd47-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-68
+    internal: true
+    name: xrd44-gi3-xrd47-gi2
+  xrd44-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-113
+    internal: true
+    name: xrd44-gi4
+  xrd44-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-114
+    internal: true
+    name: xrd44-gi5
+  xrd45-gi2-xrd46-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-69
+    internal: true
+    name: xrd45-gi2-xrd46-gi3
+  xrd45-gi3-xrd47-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-70
+    internal: true
+    name: xrd45-gi3-xrd47-gi3
+  xrd45-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-115
+    internal: true
+    name: xrd45-gi4
+  xrd45-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-116
+    internal: true
+    name: xrd45-gi5
+  xrd46-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-117
+    internal: true
+    name: xrd46-gi5
+  xrd46-host:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-103
+    ipam:
+      config:
+      - subnet: 10.10.46.0/24
+  xrd47-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-118
+    internal: true
+    name: xrd47-gi5
+  xrd47-host:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-104
+    ipam:
+      config:
+      - subnet: 10.10.47.0/24
+  xrd60-gi0-xrd13-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-71
+    internal: true
+    name: xrd60-gi0-xrd13-gi3
+  xrd60-gi1-xrd14-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-72
+    internal: true
+    name: xrd60-gi1-xrd14-gi3
+  xrd60-gi2-xrd62-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-73
+    internal: true
+    name: xrd60-gi2-xrd62-gi0
+  xrd60-gi3-xrd63-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-74
+    internal: true
+    name: xrd60-gi3-xrd63-gi0
+  xrd60-gi4-xrd64-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-75
+    internal: true
+    name: xrd60-gi4-xrd64-gi0
+  xrd60-gi5-xrd65-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-76
+    internal: true
+    name: xrd60-gi5-xrd65-gi0
+  xrd61-gi0-xrd13-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-77
+    internal: true
+    name: xrd61-gi0-xrd13-gi2
+  xrd61-gi1-xrd14-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-78
+    internal: true
+    name: xrd61-gi1-xrd14-gi2
+  xrd61-gi2-xrd62-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-79
+    internal: true
+    name: xrd61-gi2-xrd62-gi1
+  xrd61-gi3-xrd63-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-80
+    internal: true
+    name: xrd61-gi3-xrd63-gi1
+  xrd61-gi4-xrd64-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-81
+    internal: true
+    name: xrd61-gi4-xrd64-gi1
+  xrd61-gi5-xrd65-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-82
+    internal: true
+    name: xrd61-gi5-xrd65-gi1
+  xrd62-gi2-xrd66-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-83
+    internal: true
+    name: xrd62-gi2-xrd66-gi0
+  xrd62-gi3-xrd67-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-84
+    internal: true
+    name: xrd62-gi3-xrd67-gi0
+  xrd62-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-119
+    internal: true
+    name: xrd62-gi4
+  xrd62-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-120
+    internal: true
+    name: xrd62-gi5
+  xrd63-gi2-xrd66-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-85
+    internal: true
+    name: xrd63-gi2-xrd66-gi1
+  xrd63-gi3-xrd67-gi1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-86
+    internal: true
+    name: xrd63-gi3-xrd67-gi1
+  xrd63-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-121
+    internal: true
+    name: xrd63-gi4
+  xrd63-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-122
+    internal: true
+    name: xrd63-gi5
+  xrd64-gi2-xrd66-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-87
+    internal: true
+    name: xrd64-gi2-xrd66-gi2
+  xrd64-gi3-xrd67-gi2:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-88
+    internal: true
+    name: xrd64-gi3-xrd67-gi2
+  xrd64-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-123
+    internal: true
+    name: xrd64-gi4
+  xrd64-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-124
+    internal: true
+    name: xrd64-gi5
+  xrd65-gi2-xrd66-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-89
+    internal: true
+    name: xrd65-gi2-xrd66-gi3
+  xrd65-gi3-xrd67-gi3:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-90
+    internal: true
+    name: xrd65-gi3-xrd67-gi3
+  xrd65-gi4:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-125
+    internal: true
+    name: xrd65-gi4
+  xrd65-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-126
+    internal: true
+    name: xrd65-gi5
+  xrd66-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-127
+    internal: true
+    name: xrd66-gi5
+  xrd66-host:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-105
+    ipam:
+      config:
+      - subnet: 10.10.66.0/24
+  xrd67-gi5:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-128
+    internal: true
+    name: xrd67-gi5
+  xrd67-host:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-106
+    ipam:
+      config:
+      - subnet: 10.10.67.0/24
 services:
   source:
     cap_add:
@@ -427,15 +703,15 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-00,xr_name=Gi0/0/0/0;linux:xr-10,xr_name=Gi0/0/0/1;linux:xr-520,xr_name=Gi0/0/0/2,chksum;linux:xr-530,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-00,xr_name=Gi0/0/0/0;linux:xr-10,xr_name=Gi0/0/0/1;linux:xr-570,xr_name=Gi0/0/0/2;linux:xr-510,xr_name=Gi0/0/0/3
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
       xrd00-gi0-xrd02-gi6: null
       xrd00-gi1-xrd03-gi6: null
-      xrd00-host1: null
-      xrd00-host2: null
+      xrd40-gi0-xrd00-gi3: null
+      xrd41-gi0-xrd00-gi2: null
     security_opt:
     - apparmor:unconfined
     - label:disable
@@ -481,15 +757,15 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-20,xr_name=Gi0/0/0/0;linux:xr-30,xr_name=Gi0/0/0/1;linux:xr-540,xr_name=Gi0/0/0/2,chksum;linux:xr-550,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-20,xr_name=Gi0/0/0/0;linux:xr-30,xr_name=Gi0/0/0/1;linux:xr-580,xr_name=Gi0/0/0/2;linux:xr-520,xr_name=Gi0/0/0/3
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
       xrd01-gi0-xrd02-gi5: null
       xrd01-gi1-xrd03-gi5: null
-      xrd01-host1: null
-      xrd01-host2: null
+      xrd40-gi1-xrd01-gi3: null
+      xrd41-gi1-xrd01-gi2: null
     security_opt:
     - apparmor:unconfined
     - label:disable
@@ -536,7 +812,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-40,xr_name=Gi0/0/0/0;linux:xr-50,xr_name=Gi0/0/0/1;linux:xr-60,xr_name=Gi0/0/0/2;linux:xr-70,xr_name=Gi0/0/0/3;linux:xr-80,xr_name=Gi0/0/0/4;linux:xr-20,xr_name=Gi0/0/0/5;linux:xr-00,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -593,7 +869,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-40,xr_name=Gi0/0/0/0;linux:xr-90,xr_name=Gi0/0/0/1;linux:xr-100,xr_name=Gi0/0/0/2;linux:xr-110,xr_name=Gi0/0/0/3;linux:xr-120,xr_name=Gi0/0/0/4;linux:xr-30,xr_name=Gi0/0/0/5;linux:xr-10,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -650,7 +926,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-130,xr_name=Gi0/0/0/0;linux:xr-140,xr_name=Gi0/0/0/1;linux:xr-60,xr_name=Gi0/0/0/2;linux:xr-150,xr_name=Gi0/0/0/3
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -704,7 +980,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-130,xr_name=Gi0/0/0/0;linux:xr-160,xr_name=Gi0/0/0/1;linux:xr-90,xr_name=Gi0/0/0/2;linux:xr-170,xr_name=Gi0/0/0/3;linux:xr-180,xr_name=Gi0/0/0/4
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -758,8 +1034,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-170,xr_name=Gi0/0/0/0;linux:xr-150,xr_name=Gi0/0/0/1;linux:xr-560,xr_name=Gi0/0/0/2,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-170,xr_name=Gi0/0/0/0;linux:xr-150,xr_name=Gi0/0/0/1;linux:xr-920,xr_name=Gi0/0/0/2,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -812,7 +1088,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-190,xr_name=Gi0/0/0/0;linux:xr-200,xr_name=Gi0/0/0/1;linux:xr-160,xr_name=Gi0/0/0/2;linux:xr-210,xr_name=Gi0/0/0/3;linux:xr-220,xr_name=Gi0/0/0/4;linux:xr-230,xr_name=Gi0/0/0/5
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -868,7 +1144,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-190,xr_name=Gi0/0/0/0;linux:xr-240,xr_name=Gi0/0/0/1;linux:xr-250,xr_name=Gi0/0/0/2;linux:xr-260,xr_name=Gi0/0/0/3;linux:xr-140,xr_name=Gi0/0/0/4
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -922,8 +1198,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-220,xr_name=Gi0/0/0/0;linux:xr-240,xr_name=Gi0/0/0/1;linux:xr-570,xr_name=Gi0/0/0/2,chksum;linux:xr-580,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-220,xr_name=Gi0/0/0/0;linux:xr-240,xr_name=Gi0/0/0/1;linux:xr-930,xr_name=Gi0/0/0/2,chksum;linux:xr-940,xr_name=Gi0/0/0/3,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -976,8 +1252,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-210,xr_name=Gi0/0/0/0;linux:xr-250,xr_name=Gi0/0/0/1;linux:xr-590,xr_name=Gi0/0/0/2,chksum;linux:xr-600,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-210,xr_name=Gi0/0/0/0;linux:xr-250,xr_name=Gi0/0/0/1;linux:xr-950,xr_name=Gi0/0/0/2,chksum;linux:xr-960,xr_name=Gi0/0/0/3,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1031,7 +1307,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-270,xr_name=Gi0/0/0/0;linux:xr-280,xr_name=Gi0/0/0/1;linux:xr-290,xr_name=Gi0/0/0/2;linux:xr-50,xr_name=Gi0/0/0/3;linux:xr-260,xr_name=Gi0/0/0/4;linux:xr-300,xr_name=Gi0/0/0/5;linux:xr-310,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1088,7 +1364,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-270,xr_name=Gi0/0/0/0;linux:xr-200,xr_name=Gi0/0/0/1;linux:xr-100,xr_name=Gi0/0/0/2;linux:xr-320,xr_name=Gi0/0/0/3;linux:xr-330,xr_name=Gi0/0/0/4;linux:xr-340,xr_name=Gi0/0/0/5;linux:xr-350,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1144,15 +1420,15 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-300,xr_name=Gi0/0/0/0;linux:xr-340,xr_name=Gi0/0/0/1;linux:xr-610,xr_name=Gi0/0/0/2,chksum;linux:xr-620,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-300,xr_name=Gi0/0/0/0;linux:xr-340,xr_name=Gi0/0/0/1;linux:xr-770,xr_name=Gi0/0/0/2;linux:xr-710,xr_name=Gi0/0/0/3
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
       xrd11-gi5-xrd13-gi0: null
       xrd12-gi5-xrd13-gi1: null
-      xrd13-host1: null
-      xrd13-host2: null
+      xrd60-gi0-xrd13-gi3: null
+      xrd61-gi0-xrd13-gi2: null
     security_opt:
     - apparmor:unconfined
     - label:disable
@@ -1198,15 +1474,15 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-310,xr_name=Gi0/0/0/0;linux:xr-350,xr_name=Gi0/0/0/1;linux:xr-630,xr_name=Gi0/0/0/2,chksum;linux:xr-640,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-310,xr_name=Gi0/0/0/0;linux:xr-350,xr_name=Gi0/0/0/1;linux:xr-780,xr_name=Gi0/0/0/2;linux:xr-720,xr_name=Gi0/0/0/3
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
       xrd11-gi6-xrd14-gi0: null
       xrd12-gi6-xrd14-gi1: null
-      xrd14-host1: null
-      xrd14-host2: null
+      xrd60-gi1-xrd14-gi3: null
+      xrd61-gi1-xrd14-gi2: null
     security_opt:
     - apparmor:unconfined
     - label:disable
@@ -1253,7 +1529,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-360,xr_name=Gi0/0/0/0;linux:xr-370,xr_name=Gi0/0/0/1;linux:xr-330,xr_name=Gi0/0/0/2;linux:xr-380,xr_name=Gi0/0/0/3
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1307,7 +1583,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-360,xr_name=Gi0/0/0/0;linux:xr-280,xr_name=Gi0/0/0/1;linux:xr-390,xr_name=Gi0/0/0/2;linux:xr-400,xr_name=Gi0/0/0/3
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1360,8 +1636,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-380,xr_name=Gi0/0/0/0;linux:xr-400,xr_name=Gi0/0/0/1;linux:xr-650,xr_name=Gi0/0/0/2,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-380,xr_name=Gi0/0/0/0;linux:xr-400,xr_name=Gi0/0/0/1;linux:xr-970,xr_name=Gi0/0/0/2,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1414,7 +1690,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-410,xr_name=Gi0/0/0/0;linux:xr-420,xr_name=Gi0/0/0/1;linux:xr-110,xr_name=Gi0/0/0/2;linux:xr-320,xr_name=Gi0/0/0/3;linux:xr-370,xr_name=Gi0/0/0/4;linux:xr-430,xr_name=Gi0/0/0/5;linux:xr-440,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1471,7 +1747,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-410,xr_name=Gi0/0/0/0;linux:xr-290,xr_name=Gi0/0/0/1;linux:xr-70,xr_name=Gi0/0/0/2;linux:xr-450,xr_name=Gi0/0/0/3;linux:xr-460,xr_name=Gi0/0/0/4;linux:xr-470,xr_name=Gi0/0/0/5;linux:xr-390,xr_name=Gi0/0/0/6
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1527,8 +1803,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-440,xr_name=Gi0/0/0/0;linux:xr-470,xr_name=Gi0/0/0/1;linux:xr-660,xr_name=Gi0/0/0/2,chksum;linux:xr-670,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-440,xr_name=Gi0/0/0/0;linux:xr-470,xr_name=Gi0/0/0/1;linux:xr-980,xr_name=Gi0/0/0/2,chksum;linux:xr-990,xr_name=Gi0/0/0/3,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1581,8 +1857,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-430,xr_name=Gi0/0/0/0;linux:xr-460,xr_name=Gi0/0/0/1;linux:xr-680,xr_name=Gi0/0/0/2,chksum;linux:xr-690,xr_name=Gi0/0/0/3,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-430,xr_name=Gi0/0/0/0;linux:xr-460,xr_name=Gi0/0/0/1;linux:xr-1000,xr_name=Gi0/0/0/2,chksum;linux:xr-1010,xr_name=Gi0/0/0/3,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1636,7 +1912,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-480,xr_name=Gi0/0/0/0;linux:xr-120,xr_name=Gi0/0/0/1;linux:xr-420,xr_name=Gi0/0/0/2;linux:xr-490,xr_name=Gi0/0/0/3
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1690,7 +1966,7 @@ services:
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-480,xr_name=Gi0/0/0/0;linux:xr-80,xr_name=Gi0/0/0/1;linux:xr-500,xr_name=Gi0/0/0/2;linux:xr-450,xr_name=Gi0/0/0/3
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1743,8 +2019,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-490,xr_name=Gi0/0/0/0;linux:xr-500,xr_name=Gi0/0/0/1;linux:xr-700,xr_name=Gi0/0/0/2,chksum
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-490,xr_name=Gi0/0/0/0;linux:xr-500,xr_name=Gi0/0/0/1;linux:xr-1020,xr_name=Gi0/0/0/2,chksum
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1796,8 +2072,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-230,xr_name=Gi0/0/0/0;linux:xr-710,xr_name=Gi0/0/0/1
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-230,xr_name=Gi0/0/0/0;linux:xr-1070,xr_name=Gi0/0/0/1
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1848,8 +2124,8 @@ services:
     - /dev/net/tun
     environment:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
-      XR_INTERFACES: linux:xr-180,xr_name=Gi0/0/0/0;linux:xr-720,xr_name=Gi0/0/0/1
-      XR_MGMT_INTERFACES: linux:xr-510,xr_name=Mg0/RP0/CPU0/0,chksum
+      XR_INTERFACES: linux:xr-180,xr_name=Gi0/0/0/0;linux:xr-1080,xr_name=Gi0/0/0/1
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
     image: localhost/ios-xr:7.7.1
     networks:
       mgmt: null
@@ -1865,6 +2141,902 @@ services:
       target: /etc/xrd/startup.cfg
       type: bind
     - xrd26:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd40:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd40
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-510,xr_name=Gi0/0/0/0;linux:xr-520,xr_name=Gi0/0/0/1;linux:xr-530,xr_name=Gi0/0/0/2;linux:xr-540,xr_name=Gi0/0/0/3;linux:xr-550,xr_name=Gi0/0/0/4;linux:xr-560,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd40-gi0-xrd00-gi3: null
+      xrd40-gi1-xrd01-gi3: null
+      xrd40-gi2-xrd42-gi0: null
+      xrd40-gi3-xrd43-gi0: null
+      xrd40-gi4-xrd44-gi0: null
+      xrd40-gi5-xrd45-gi0: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd40.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd40:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd41:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd41
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-570,xr_name=Gi0/0/0/0;linux:xr-580,xr_name=Gi0/0/0/1;linux:xr-590,xr_name=Gi0/0/0/2;linux:xr-600,xr_name=Gi0/0/0/3;linux:xr-610,xr_name=Gi0/0/0/4;linux:xr-620,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd41-gi0-xrd00-gi2: null
+      xrd41-gi1-xrd01-gi2: null
+      xrd41-gi2-xrd42-gi1: null
+      xrd41-gi3-xrd43-gi1: null
+      xrd41-gi4-xrd44-gi1: null
+      xrd41-gi5-xrd45-gi1: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd41.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd41:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd42:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd42
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-530,xr_name=Gi0/0/0/0;linux:xr-590,xr_name=Gi0/0/0/1;linux:xr-630,xr_name=Gi0/0/0/2;linux:xr-640,xr_name=Gi0/0/0/3;linux:xr-1090,xr_name=Gi0/0/0/4;linux:xr-1100,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd40-gi2-xrd42-gi0: null
+      xrd41-gi2-xrd42-gi1: null
+      xrd42-gi2-xrd46-gi0: null
+      xrd42-gi3-xrd47-gi0: null
+      xrd42-gi4: null
+      xrd42-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd42.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd42:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd43:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd43
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-540,xr_name=Gi0/0/0/0;linux:xr-600,xr_name=Gi0/0/0/1;linux:xr-650,xr_name=Gi0/0/0/2;linux:xr-660,xr_name=Gi0/0/0/3;linux:xr-1110,xr_name=Gi0/0/0/4;linux:xr-1120,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd40-gi3-xrd43-gi0: null
+      xrd41-gi3-xrd43-gi1: null
+      xrd43-gi2-xrd46-gi1: null
+      xrd43-gi3-xrd47-gi1: null
+      xrd43-gi4: null
+      xrd43-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd43.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd43:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd44:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd44
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-550,xr_name=Gi0/0/0/0;linux:xr-610,xr_name=Gi0/0/0/1;linux:xr-670,xr_name=Gi0/0/0/2;linux:xr-680,xr_name=Gi0/0/0/3;linux:xr-1130,xr_name=Gi0/0/0/4;linux:xr-1140,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd40-gi4-xrd44-gi0: null
+      xrd41-gi4-xrd44-gi1: null
+      xrd44-gi2-xrd46-gi2: null
+      xrd44-gi3-xrd47-gi2: null
+      xrd44-gi4: null
+      xrd44-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd44.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd44:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd45:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd45
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-560,xr_name=Gi0/0/0/0;linux:xr-620,xr_name=Gi0/0/0/1;linux:xr-690,xr_name=Gi0/0/0/2;linux:xr-700,xr_name=Gi0/0/0/3;linux:xr-1150,xr_name=Gi0/0/0/4;linux:xr-1160,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd40-gi5-xrd45-gi0: null
+      xrd41-gi5-xrd45-gi1: null
+      xrd45-gi2-xrd46-gi3: null
+      xrd45-gi3-xrd47-gi3: null
+      xrd45-gi4: null
+      xrd45-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd45.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd45:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd46:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd46
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-630,xr_name=Gi0/0/0/0;linux:xr-650,xr_name=Gi0/0/0/1;linux:xr-670,xr_name=Gi0/0/0/2;linux:xr-690,xr_name=Gi0/0/0/3;linux:xr-1030,xr_name=Gi0/0/0/4,chksum;linux:xr-1170,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd42-gi2-xrd46-gi0: null
+      xrd43-gi2-xrd46-gi1: null
+      xrd44-gi2-xrd46-gi2: null
+      xrd45-gi2-xrd46-gi3: null
+      xrd46-gi5: null
+      xrd46-host: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd46.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd46:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd47:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd47
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-640,xr_name=Gi0/0/0/0;linux:xr-660,xr_name=Gi0/0/0/1;linux:xr-680,xr_name=Gi0/0/0/2;linux:xr-700,xr_name=Gi0/0/0/3;linux:xr-1040,xr_name=Gi0/0/0/4,chksum;linux:xr-1180,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd42-gi3-xrd47-gi0: null
+      xrd43-gi3-xrd47-gi1: null
+      xrd44-gi3-xrd47-gi2: null
+      xrd45-gi3-xrd47-gi3: null
+      xrd47-gi5: null
+      xrd47-host: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd47.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd47:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd60:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd60
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-710,xr_name=Gi0/0/0/0;linux:xr-720,xr_name=Gi0/0/0/1;linux:xr-730,xr_name=Gi0/0/0/2;linux:xr-740,xr_name=Gi0/0/0/3;linux:xr-750,xr_name=Gi0/0/0/4;linux:xr-760,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd60-gi0-xrd13-gi3: null
+      xrd60-gi1-xrd14-gi3: null
+      xrd60-gi2-xrd62-gi0: null
+      xrd60-gi3-xrd63-gi0: null
+      xrd60-gi4-xrd64-gi0: null
+      xrd60-gi5-xrd65-gi0: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd60.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd60:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd61:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd61
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-770,xr_name=Gi0/0/0/0;linux:xr-780,xr_name=Gi0/0/0/1;linux:xr-790,xr_name=Gi0/0/0/2;linux:xr-800,xr_name=Gi0/0/0/3;linux:xr-810,xr_name=Gi0/0/0/4;linux:xr-820,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd61-gi0-xrd13-gi2: null
+      xrd61-gi1-xrd14-gi2: null
+      xrd61-gi2-xrd62-gi1: null
+      xrd61-gi3-xrd63-gi1: null
+      xrd61-gi4-xrd64-gi1: null
+      xrd61-gi5-xrd65-gi1: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd61.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd61:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd62:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd62
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-730,xr_name=Gi0/0/0/0;linux:xr-790,xr_name=Gi0/0/0/1;linux:xr-830,xr_name=Gi0/0/0/2;linux:xr-840,xr_name=Gi0/0/0/3;linux:xr-1190,xr_name=Gi0/0/0/4;linux:xr-1200,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd60-gi2-xrd62-gi0: null
+      xrd61-gi2-xrd62-gi1: null
+      xrd62-gi2-xrd66-gi0: null
+      xrd62-gi3-xrd67-gi0: null
+      xrd62-gi4: null
+      xrd62-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd62.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd62:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd63:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd63
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-740,xr_name=Gi0/0/0/0;linux:xr-800,xr_name=Gi0/0/0/1;linux:xr-850,xr_name=Gi0/0/0/2;linux:xr-860,xr_name=Gi0/0/0/3;linux:xr-1210,xr_name=Gi0/0/0/4;linux:xr-1220,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd60-gi3-xrd63-gi0: null
+      xrd61-gi3-xrd63-gi1: null
+      xrd63-gi2-xrd66-gi1: null
+      xrd63-gi3-xrd67-gi1: null
+      xrd63-gi4: null
+      xrd63-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd63.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd63:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd64:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd64
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-750,xr_name=Gi0/0/0/0;linux:xr-810,xr_name=Gi0/0/0/1;linux:xr-870,xr_name=Gi0/0/0/2;linux:xr-880,xr_name=Gi0/0/0/3;linux:xr-1230,xr_name=Gi0/0/0/4;linux:xr-1240,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd60-gi4-xrd64-gi0: null
+      xrd61-gi4-xrd64-gi1: null
+      xrd64-gi2-xrd66-gi2: null
+      xrd64-gi3-xrd67-gi2: null
+      xrd64-gi4: null
+      xrd64-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd64.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd64:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd65:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd65
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-760,xr_name=Gi0/0/0/0;linux:xr-820,xr_name=Gi0/0/0/1;linux:xr-890,xr_name=Gi0/0/0/2;linux:xr-900,xr_name=Gi0/0/0/3;linux:xr-1250,xr_name=Gi0/0/0/4;linux:xr-1260,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd60-gi5-xrd65-gi0: null
+      xrd61-gi5-xrd65-gi1: null
+      xrd65-gi2-xrd66-gi3: null
+      xrd65-gi3-xrd67-gi3: null
+      xrd65-gi4: null
+      xrd65-gi5: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd65.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd65:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd66:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd66
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-830,xr_name=Gi0/0/0/0;linux:xr-850,xr_name=Gi0/0/0/1;linux:xr-870,xr_name=Gi0/0/0/2;linux:xr-890,xr_name=Gi0/0/0/3;linux:xr-1050,xr_name=Gi0/0/0/4,chksum;linux:xr-1270,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd62-gi2-xrd66-gi0: null
+      xrd63-gi2-xrd66-gi1: null
+      xrd64-gi2-xrd66-gi2: null
+      xrd65-gi2-xrd66-gi3: null
+      xrd66-gi5: null
+      xrd66-host: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd66.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd66:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xrd67:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    - SYS_RAWIO
+    cap_drop:
+    - all
+    container_name: xrd67
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-840,xr_name=Gi0/0/0/0;linux:xr-860,xr_name=Gi0/0/0/1;linux:xr-880,xr_name=Gi0/0/0/2;linux:xr-900,xr_name=Gi0/0/0/3;linux:xr-1060,xr_name=Gi0/0/0/4,chksum;linux:xr-1280,xr_name=Gi0/0/0/5
+      XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/ios-xr:7.7.1
+    networks:
+      mgmt: null
+      xrd62-gi3-xrd67-gi0: null
+      xrd63-gi3-xrd67-gi1: null
+      xrd64-gi3-xrd67-gi2: null
+      xrd65-gi3-xrd67-gi3: null
+      xrd67-gi5: null
+      xrd67-host: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./config/xrd67.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xrd67:/xr-storage/
     - read_only: true
       source: /sys/fs/cgroup
       target: /sys/fs/cgroup
@@ -1925,3 +3097,35 @@ volumes:
     name: xrd25
   xrd26:
     name: xrd26
+  xrd40:
+    name: xrd40
+  xrd41:
+    name: xrd41
+  xrd42:
+    name: xrd42
+  xrd43:
+    name: xrd43
+  xrd44:
+    name: xrd44
+  xrd45:
+    name: xrd45
+  xrd46:
+    name: xrd46
+  xrd47:
+    name: xrd47
+  xrd60:
+    name: xrd60
+  xrd61:
+    name: xrd61
+  xrd62:
+    name: xrd62
+  xrd63:
+    name: xrd63
+  xrd64:
+    name: xrd64
+  xrd65:
+    name: xrd65
+  xrd66:
+    name: xrd66
+  xrd67:
+    name: xrd67

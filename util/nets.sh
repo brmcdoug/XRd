@@ -57,7 +57,7 @@ echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd03-gi2-xrd12-gi2 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
-echo br-"$netinstance" > ./xrd03-xrd11
+echo br-"$netinstance" > ./xrd03-xrd12
 echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd03-gi3-xrd18-gi2 /{print $0}' > net.txt
@@ -169,7 +169,7 @@ echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd12-gi3-xrd18-gi3 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
-echo br-"$netinstance" > ./xrd12-xrd13
+echo br-"$netinstance" > ./xrd12-xrd18
 echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd12-gi4-xrd15-gi2 /{print $0}' > net.txt
@@ -489,4 +489,3 @@ echo br-"$netinstance" > ./xrd17-host
 echo br-"$netinstance"
 
 rm net.txt
-rm br.txt

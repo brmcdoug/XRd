@@ -203,7 +203,7 @@ netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd15-xrd17
 echo br-"$netinstance"
 
-docker network ls | awk -F': ' '/xrd16-gi2-xrd19-gi6    /{print $0}' > net.txt
+docker network ls | awk -F': ' '/xrd16-gi2-xrd19-gi6 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd16-xrd19
 echo br-"$netinstance"
@@ -224,7 +224,7 @@ netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd18-xrd22
 echo br-"$netinstance"
 
-docker network ls | awk -F': ' '/xrd18-gi5-xrd21-gi0    /{print $0}' > net.txt
+docker network ls | awk -F': ' '/xrd18-gi5-xrd21-gi0 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd18-xrd21
 echo br-"$netinstance"
@@ -240,7 +240,7 @@ netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd19-xrd23
 echo br-"$netinstance"
 
-docker network ls | awk -F': ' '/xrd19-gi4-xrd21-gi1    /{print $0}' > net.txt
+docker network ls | awk -F': ' '/xrd19-gi4-xrd21-gi1 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd19-xrd21
 echo br-"$netinstance"
@@ -251,7 +251,7 @@ echo br-"$netinstance" > ./xrd19-xrd20
 echo br-"$netinstance"
 
 
-docker network ls | awk -F': ' '/xrd22-gi0-xrd23-gi0    /{print $0}' > net.txt
+docker network ls | awk -F': ' '/xrd22-gi0-xrd23-gi0 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd22-xrd23
 echo br-"$netinstance"
@@ -261,7 +261,7 @@ netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd22-xrd24
 echo br-"$netinstance"
 
-docker network ls | awk -F': ' '/xrd23-gi2-xrd24-gi1    /{print $0}' > net.txt
+docker network ls | awk -F': ' '/xrd23-gi2-xrd24-gi1 /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd23-xrd24
 echo br-"$netinstance"

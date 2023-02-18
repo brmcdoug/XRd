@@ -143,7 +143,7 @@ echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd11-gi0-xrd12-gi0  /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
-echo br-"$netinstance" > ./xrd11-xrd09
+echo br-"$netinstance" > ./xrd11-xrd12
 echo br-"$netinstance"
 
 docker network ls | awk -F': ' '/xrd11-gi1-xrd16-gi1 /{print $0}' > net.txt

@@ -705,7 +705,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-00,xr_name=Gi0/0/0/0;linux:xr-10,xr_name=Gi0/0/0/1;linux:xr-570,xr_name=Gi0/0/0/2;linux:xr-510,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd00-gi0-xrd02-gi6: null
@@ -759,7 +759,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-20,xr_name=Gi0/0/0/0;linux:xr-30,xr_name=Gi0/0/0/1;linux:xr-580,xr_name=Gi0/0/0/2;linux:xr-520,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd01-gi0-xrd02-gi5: null
@@ -813,7 +813,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-40,xr_name=Gi0/0/0/0;linux:xr-50,xr_name=Gi0/0/0/1;linux:xr-60,xr_name=Gi0/0/0/2;linux:xr-70,xr_name=Gi0/0/0/3;linux:xr-80,xr_name=Gi0/0/0/4;linux:xr-20,xr_name=Gi0/0/0/5;linux:xr-00,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd00-gi0-xrd02-gi6: null
@@ -870,7 +870,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-40,xr_name=Gi0/0/0/0;linux:xr-90,xr_name=Gi0/0/0/1;linux:xr-100,xr_name=Gi0/0/0/2;linux:xr-110,xr_name=Gi0/0/0/3;linux:xr-120,xr_name=Gi0/0/0/4;linux:xr-30,xr_name=Gi0/0/0/5;linux:xr-10,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd00-gi1-xrd03-gi6: null
@@ -927,7 +927,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-130,xr_name=Gi0/0/0/0;linux:xr-140,xr_name=Gi0/0/0/1;linux:xr-60,xr_name=Gi0/0/0/2;linux:xr-150,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd02-gi2-xrd04-gi2: null
@@ -981,7 +981,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-130,xr_name=Gi0/0/0/0;linux:xr-160,xr_name=Gi0/0/0/1;linux:xr-90,xr_name=Gi0/0/0/2;linux:xr-170,xr_name=Gi0/0/0/3;linux:xr-180,xr_name=Gi0/0/0/4
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd03-gi1-xrd05-gi2: null
@@ -1036,7 +1036,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-170,xr_name=Gi0/0/0/0;linux:xr-150,xr_name=Gi0/0/0/1;linux:xr-920,xr_name=Gi0/0/0/2,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd04-gi3-xrd06-gi1: null
@@ -1089,7 +1089,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-190,xr_name=Gi0/0/0/0;linux:xr-200,xr_name=Gi0/0/0/1;linux:xr-160,xr_name=Gi0/0/0/2;linux:xr-210,xr_name=Gi0/0/0/3;linux:xr-220,xr_name=Gi0/0/0/4;linux:xr-230,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd05-gi1-xrd07-gi2: null
@@ -1145,7 +1145,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-190,xr_name=Gi0/0/0/0;linux:xr-240,xr_name=Gi0/0/0/1;linux:xr-250,xr_name=Gi0/0/0/2;linux:xr-260,xr_name=Gi0/0/0/3;linux:xr-140,xr_name=Gi0/0/0/4
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd04-gi1-xrd08-gi4: null
@@ -1200,7 +1200,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-220,xr_name=Gi0/0/0/0;linux:xr-240,xr_name=Gi0/0/0/1;linux:xr-930,xr_name=Gi0/0/0/2,chksum;linux:xr-940,xr_name=Gi0/0/0/3,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd07-gi4-xrd09-gi0: null
@@ -1254,7 +1254,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-210,xr_name=Gi0/0/0/0;linux:xr-250,xr_name=Gi0/0/0/1;linux:xr-950,xr_name=Gi0/0/0/2,chksum;linux:xr-960,xr_name=Gi0/0/0/3,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd07-gi3-xrd10-gi0: null
@@ -1308,7 +1308,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-270,xr_name=Gi0/0/0/0;linux:xr-280,xr_name=Gi0/0/0/1;linux:xr-290,xr_name=Gi0/0/0/2;linux:xr-50,xr_name=Gi0/0/0/3;linux:xr-260,xr_name=Gi0/0/0/4;linux:xr-300,xr_name=Gi0/0/0/5;linux:xr-310,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd02-gi1-xrd11-gi3: null
@@ -1365,7 +1365,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-270,xr_name=Gi0/0/0/0;linux:xr-200,xr_name=Gi0/0/0/1;linux:xr-100,xr_name=Gi0/0/0/2;linux:xr-320,xr_name=Gi0/0/0/3;linux:xr-330,xr_name=Gi0/0/0/4;linux:xr-340,xr_name=Gi0/0/0/5;linux:xr-350,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd03-gi2-xrd12-gi2: null
@@ -1422,7 +1422,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-300,xr_name=Gi0/0/0/0;linux:xr-340,xr_name=Gi0/0/0/1;linux:xr-770,xr_name=Gi0/0/0/2;linux:xr-710,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd11-gi5-xrd13-gi0: null
@@ -1476,7 +1476,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-310,xr_name=Gi0/0/0/0;linux:xr-350,xr_name=Gi0/0/0/1;linux:xr-780,xr_name=Gi0/0/0/2;linux:xr-720,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd11-gi6-xrd14-gi0: null
@@ -1530,7 +1530,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-360,xr_name=Gi0/0/0/0;linux:xr-370,xr_name=Gi0/0/0/1;linux:xr-330,xr_name=Gi0/0/0/2;linux:xr-380,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd12-gi4-xrd15-gi2: null
@@ -1584,7 +1584,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-360,xr_name=Gi0/0/0/0;linux:xr-280,xr_name=Gi0/0/0/1;linux:xr-390,xr_name=Gi0/0/0/2;linux:xr-400,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd11-gi1-xrd16-gi1: null
@@ -1638,7 +1638,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-380,xr_name=Gi0/0/0/0;linux:xr-400,xr_name=Gi0/0/0/1;linux:xr-970,xr_name=Gi0/0/0/2,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd15-gi3-xrd17-gi0: null
@@ -1691,7 +1691,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-410,xr_name=Gi0/0/0/0;linux:xr-420,xr_name=Gi0/0/0/1;linux:xr-110,xr_name=Gi0/0/0/2;linux:xr-320,xr_name=Gi0/0/0/3;linux:xr-370,xr_name=Gi0/0/0/4;linux:xr-430,xr_name=Gi0/0/0/5;linux:xr-440,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd03-gi3-xrd18-gi2: null
@@ -1748,7 +1748,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-410,xr_name=Gi0/0/0/0;linux:xr-290,xr_name=Gi0/0/0/1;linux:xr-70,xr_name=Gi0/0/0/2;linux:xr-450,xr_name=Gi0/0/0/3;linux:xr-460,xr_name=Gi0/0/0/4;linux:xr-470,xr_name=Gi0/0/0/5;linux:xr-390,xr_name=Gi0/0/0/6
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd02-gi3-xrd19-gi2: null
@@ -1805,7 +1805,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-440,xr_name=Gi0/0/0/0;linux:xr-470,xr_name=Gi0/0/0/1;linux:xr-980,xr_name=Gi0/0/0/2,chksum;linux:xr-990,xr_name=Gi0/0/0/3,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd18-gi6-xrd20-gi0: null
@@ -1859,7 +1859,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-430,xr_name=Gi0/0/0/0;linux:xr-460,xr_name=Gi0/0/0/1;linux:xr-1000,xr_name=Gi0/0/0/2,chksum;linux:xr-1010,xr_name=Gi0/0/0/3,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd18-gi5-xrd21-gi0: null
@@ -1913,7 +1913,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-480,xr_name=Gi0/0/0/0;linux:xr-120,xr_name=Gi0/0/0/1;linux:xr-420,xr_name=Gi0/0/0/2;linux:xr-490,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd03-gi4-xrd22-gi1: null
@@ -1967,7 +1967,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-480,xr_name=Gi0/0/0/0;linux:xr-80,xr_name=Gi0/0/0/1;linux:xr-500,xr_name=Gi0/0/0/2;linux:xr-450,xr_name=Gi0/0/0/3
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd02-gi4-xrd23-gi1: null
@@ -2021,7 +2021,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-490,xr_name=Gi0/0/0/0;linux:xr-500,xr_name=Gi0/0/0/1;linux:xr-1020,xr_name=Gi0/0/0/2,chksum
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd22-gi3-xrd24-gi0: null
@@ -2074,7 +2074,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-230,xr_name=Gi0/0/0/0;linux:xr-1070,xr_name=Gi0/0/0/1
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd07-gi5-xrd25-gi0: null
@@ -2126,7 +2126,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-180,xr_name=Gi0/0/0/0;linux:xr-1080,xr_name=Gi0/0/0/1
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd05-gi4-xrd26-gi0: null
@@ -2178,7 +2178,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-510,xr_name=Gi0/0/0/0;linux:xr-520,xr_name=Gi0/0/0/1;linux:xr-530,xr_name=Gi0/0/0/2;linux:xr-540,xr_name=Gi0/0/0/3;linux:xr-550,xr_name=Gi0/0/0/4;linux:xr-560,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd40-gi0-xrd00-gi3: null
@@ -2234,7 +2234,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-570,xr_name=Gi0/0/0/0;linux:xr-580,xr_name=Gi0/0/0/1;linux:xr-590,xr_name=Gi0/0/0/2;linux:xr-600,xr_name=Gi0/0/0/3;linux:xr-610,xr_name=Gi0/0/0/4;linux:xr-620,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd41-gi0-xrd00-gi2: null
@@ -2290,7 +2290,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-530,xr_name=Gi0/0/0/0;linux:xr-590,xr_name=Gi0/0/0/1;linux:xr-630,xr_name=Gi0/0/0/2;linux:xr-640,xr_name=Gi0/0/0/3;linux:xr-1090,xr_name=Gi0/0/0/4;linux:xr-1100,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd40-gi2-xrd42-gi0: null
@@ -2346,7 +2346,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-540,xr_name=Gi0/0/0/0;linux:xr-600,xr_name=Gi0/0/0/1;linux:xr-650,xr_name=Gi0/0/0/2;linux:xr-660,xr_name=Gi0/0/0/3;linux:xr-1110,xr_name=Gi0/0/0/4;linux:xr-1120,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd40-gi3-xrd43-gi0: null
@@ -2402,7 +2402,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-550,xr_name=Gi0/0/0/0;linux:xr-610,xr_name=Gi0/0/0/1;linux:xr-670,xr_name=Gi0/0/0/2;linux:xr-680,xr_name=Gi0/0/0/3;linux:xr-1130,xr_name=Gi0/0/0/4;linux:xr-1140,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd40-gi4-xrd44-gi0: null
@@ -2458,7 +2458,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-560,xr_name=Gi0/0/0/0;linux:xr-620,xr_name=Gi0/0/0/1;linux:xr-690,xr_name=Gi0/0/0/2;linux:xr-700,xr_name=Gi0/0/0/3;linux:xr-1150,xr_name=Gi0/0/0/4;linux:xr-1160,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd40-gi5-xrd45-gi0: null
@@ -2514,7 +2514,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-630,xr_name=Gi0/0/0/0;linux:xr-650,xr_name=Gi0/0/0/1;linux:xr-670,xr_name=Gi0/0/0/2;linux:xr-690,xr_name=Gi0/0/0/3;linux:xr-1030,xr_name=Gi0/0/0/4,chksum;linux:xr-1170,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd42-gi2-xrd46-gi0: null
@@ -2570,7 +2570,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-640,xr_name=Gi0/0/0/0;linux:xr-660,xr_name=Gi0/0/0/1;linux:xr-680,xr_name=Gi0/0/0/2;linux:xr-700,xr_name=Gi0/0/0/3;linux:xr-1040,xr_name=Gi0/0/0/4,chksum;linux:xr-1180,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd42-gi3-xrd47-gi0: null
@@ -2626,7 +2626,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-710,xr_name=Gi0/0/0/0;linux:xr-720,xr_name=Gi0/0/0/1;linux:xr-730,xr_name=Gi0/0/0/2;linux:xr-740,xr_name=Gi0/0/0/3;linux:xr-750,xr_name=Gi0/0/0/4;linux:xr-760,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd60-gi0-xrd13-gi3: null
@@ -2682,7 +2682,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-770,xr_name=Gi0/0/0/0;linux:xr-780,xr_name=Gi0/0/0/1;linux:xr-790,xr_name=Gi0/0/0/2;linux:xr-800,xr_name=Gi0/0/0/3;linux:xr-810,xr_name=Gi0/0/0/4;linux:xr-820,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd61-gi0-xrd13-gi2: null
@@ -2738,7 +2738,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-730,xr_name=Gi0/0/0/0;linux:xr-790,xr_name=Gi0/0/0/1;linux:xr-830,xr_name=Gi0/0/0/2;linux:xr-840,xr_name=Gi0/0/0/3;linux:xr-1190,xr_name=Gi0/0/0/4;linux:xr-1200,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd60-gi2-xrd62-gi0: null
@@ -2794,7 +2794,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-740,xr_name=Gi0/0/0/0;linux:xr-800,xr_name=Gi0/0/0/1;linux:xr-850,xr_name=Gi0/0/0/2;linux:xr-860,xr_name=Gi0/0/0/3;linux:xr-1210,xr_name=Gi0/0/0/4;linux:xr-1220,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd60-gi3-xrd63-gi0: null
@@ -2850,7 +2850,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-750,xr_name=Gi0/0/0/0;linux:xr-810,xr_name=Gi0/0/0/1;linux:xr-870,xr_name=Gi0/0/0/2;linux:xr-880,xr_name=Gi0/0/0/3;linux:xr-1230,xr_name=Gi0/0/0/4;linux:xr-1240,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd60-gi4-xrd64-gi0: null
@@ -2906,7 +2906,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-760,xr_name=Gi0/0/0/0;linux:xr-820,xr_name=Gi0/0/0/1;linux:xr-890,xr_name=Gi0/0/0/2;linux:xr-900,xr_name=Gi0/0/0/3;linux:xr-1250,xr_name=Gi0/0/0/4;linux:xr-1260,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd60-gi5-xrd65-gi0: null
@@ -2962,7 +2962,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-830,xr_name=Gi0/0/0/0;linux:xr-850,xr_name=Gi0/0/0/1;linux:xr-870,xr_name=Gi0/0/0/2;linux:xr-890,xr_name=Gi0/0/0/3;linux:xr-1050,xr_name=Gi0/0/0/4,chksum;linux:xr-1270,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd62-gi2-xrd66-gi0: null
@@ -3018,7 +3018,7 @@ services:
       XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
       XR_INTERFACES: linux:xr-840,xr_name=Gi0/0/0/0;linux:xr-860,xr_name=Gi0/0/0/1;linux:xr-880,xr_name=Gi0/0/0/2;linux:xr-900,xr_name=Gi0/0/0/3;linux:xr-1060,xr_name=Gi0/0/0/4,chksum;linux:xr-1280,xr_name=Gi0/0/0/5
       XR_MGMT_INTERFACES: linux:xr-910,xr_name=Mg0/RP0/CPU0/0,chksum
-    image: localhost/ios-xr:7.7.1
+    image: ios-xr/xrd-control-plane:7.8.1
     networks:
       mgmt: null
       xrd62-gi3-xrd67-gi0: null

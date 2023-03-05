@@ -1,8 +1,8 @@
 <domain type='kvm'>
-  <name>ubuntu-vpp</name>
-  <description>ubuntu-vpp-20.04</description>
-  <memory unit='MB'>4000</memory>
-  <currentMemory unit='MB'>4000</currentMemory>
+  <name>ubuntu-cilium</name>
+  <description>ubuntu-cilium-20.04</description>
+  <memory unit='MB'>8000</memory>
+  <currentMemory unit='MB'>8000</currentMemory>
   <cpu mode='custom' match='exact' check='partial'>
     <model fallback='allow'>qemu64</model>
     <feature policy='require' name='ssse3'/>
@@ -33,11 +33,11 @@
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/opt/images/ubuntu-vpp.img'/>
+      <source file='/opt/images/ubuntu-cilium.img'/>
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
-      <mac address='52:54:02:41:a1:07'/>
+      <mac address='52:54:69:40:a0:07'/>
       <source network='default' bridge='virbr0'/>
       <target dev='vnet0'/>
       <model type='virtio'/>
@@ -45,11 +45,11 @@
       <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
     </interface>
     <interface type='network'>
-      <mac address='52:54:02:41:a1:08'/>
-      <source network='default' bridge='virbr0'/>
-      <target dev='vnet1'/>
+      <mac address='52:54:69:40:a0:08'/>
+      <source network='default' bridge='virbr1'/>
+      <target dev='vnet0'/>
       <model type='virtio'/>
-      <alias name='net1'/>
+      <alias name='net0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x08' function='0x0'/>
     </interface>
     <serial type='pty'>

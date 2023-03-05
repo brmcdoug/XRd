@@ -56,5 +56,4 @@ end
 ### VPP VM
 
 1. should we use calico-vpp or just plain vpp?
-2. vpp config file as part of startup - complete
-3. stretch goal: govpp api
+2. stretch goal: govpp api

@@ -489,5 +489,7 @@ docker network ls | awk -F': ' '/xrd_xrd66-host /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd66-host
 echo br-"$netinstance"
+sudo brctl delif virbr0 vnet12
+sudo brctl addif br-"$netinstance" vnet12
 
 rm net.txt

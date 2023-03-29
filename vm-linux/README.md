@@ -39,13 +39,14 @@ network:
     ens7: 
       addresses: 
         - 10.10.66.3/24
+        - fc00:0:66:1::3/64
       routes:
         - to: 10.0.0.0/24
           via: 10.10.66.2
         - to: 10.10.46.0/24
           via: 10.10.66.2
-        - to: 10.11.46.0/24
-          via: 10.10.66.2
+        - to: fc00:0::/32
+          via: fc00:0:66:1::2
 
   version: 2
 ```
@@ -106,3 +107,10 @@ PING 10.10.66.2 (10.10.66.2) 56(84) bytes of data.
 64 bytes from 10.10.66.2: icmp_seq=1 ttl=255 time=3.55 ms
 64 bytes from 10.10.66.2: icmp_seq=2 ttl=255 time=1.60 ms
 ```
+
+12. add an SRv6 route!
+```
+sudo ip route add 10.11.46.0/24 encap seg6 mode encap segs fc00:0:18:3:46:1::4 dev ens7
+```
+
+Ping and run tcpdump ... note: full path not working yet, but packets do make it all the way to xrd46

@@ -113,9 +113,20 @@ PING 10.10.66.2 (10.10.66.2) 56(84) bytes of data.
 ```
 sudo ip route add 10.11.46.0/24 encap seg6 mode encap segs fc00:0:18:3:46:e002:: dev ens7
 ```
- - the route above matches this SID entry on egress node xrd46:
+ - the route above matches this SID entry on egress node xrd46, and thus xrd46 will perform SRv6 decapsulation:
 ```
 *** Locator: 'MAIN' *** 
 <snip>
 fc00:0:46:e002::            uDT4              'default'                         bgp-65046           InUse  Y 
+```
+
+Alternative linux SRv6 route/encap:
+```
+sudo ip route add 10.11.46.0/24 encap seg6 mode encap segs fc00:0:18:3:46::,fc00:0:46:1::4 dev ens7
+```
+ - this route with multiple SIDs will result in the remote VPP performing SRv6 decapsulation
+ - verbose (-vvv) tcpdump in the middle of the path gives a hint of the SRH in play:
+
+```
+09:02:41.747244 IP6 (hlim 58, next-header Routing (43) payload length: 124) fc00:0:66:1:5054:2ff:fe41:b107 > fc00:0:3:46::: srcrt (len=4, type=4, segleft=1[|srcrt]
 ```

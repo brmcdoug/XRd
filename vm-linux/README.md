@@ -109,8 +109,13 @@ PING 10.10.66.2 (10.10.66.2) 56(84) bytes of data.
 ```
 
 12. add an SRv6 route!
-```
-sudo ip route add 10.11.46.0/24 encap seg6 mode encap segs fc00:0:18:3:46:1::4 dev ens7
-```
 
-Ping and run tcpdump ... note: full path not working yet, but packets do make it all the way to xrd46
+```
+sudo ip route add 10.11.46.0/24 encap seg6 mode encap segs fc00:0:18:3:46:e002:: dev ens7
+```
+ - the route above matches this SID entry on egress node xrd46:
+```
+*** Locator: 'MAIN' *** 
+<snip>
+fc00:0:46:e002::            uDT4              'default'                         bgp-65046           InUse  Y 
+```

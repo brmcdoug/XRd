@@ -478,14 +478,14 @@ netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd17-host
 echo br-"$netinstance"
 
-docker network ls | awk -F': ' '/xrd_xrd46-host /{print $0}' > net.txt
+docker network ls | awk -F': ' '/v6-only_xrd46-host /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd46-host
 echo br-"$netinstance"
 sudo brctl delif virbr0 vnet0
 sudo brctl addif br-"$netinstance" vnet0
 
-docker network ls | awk -F': ' '/xrd_xrd66-host /{print $0}' > net.txt
+docker network ls | awk -F': ' '/v6-only_xrd66-host /{print $0}' > net.txt
 netinstance=$( head -n 1 net.txt | cut -c 1-12 )
 echo br-"$netinstance" > ./xrd66-host
 echo br-"$netinstance"
